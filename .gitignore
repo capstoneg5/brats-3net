@@ -33,3 +33,6 @@ data/embeddings/
 # Dataset
 data/train/
 data/val/
+
+capstoneg5
+capstoneg5.pub
