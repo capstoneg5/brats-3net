@@ -1,8 +1,7 @@
-# mri_preprocessing.py
 from typing import Dict, Tuple, Optional
 import numpy as np
 import torch
-import SimpleITK as sitk
+import SimpleITK as sITK
 from loguru import logger
 
 from monai.transforms import (
@@ -73,7 +72,8 @@ class MRIPreprocessor:
             ToTensord(keys=ALL_KEYS, allow_missing_keys=True),
         ])
 
-    def _build_augmentation_pipeline(self) -> Optional[Compose]:
+    @staticmethod
+    def _build_augmentation_pipeline() -> Optional[Compose]:
         if not training_config.USE_AUGMENTATION:
             return None
 
@@ -111,11 +111,18 @@ class MRIPreprocessor:
 
     @staticmethod
     def skull_strip(image: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
-        sitk_img = sitk.GetImageFromArray(image)
-        mask = sitk.Otsu(sitk_img, 0, 1)
-        mask = sitk.BinaryMorphologicalClosing(mask, [5, 5, 5])
-        mask = sitk.BinaryMorphologicalOpening(mask, [3, 3, 3])
-        mask_np = sitk.GetArrayFromImage(mask).astype(np.float32)
+        sitk_img = sITK.GetImageFromArray(image)
+
+        otsu_filter = sITK.OtsuThresholdImageFilter()
+        otsu_filter.SetInsideValue(0)
+        otsu_filter.SetOutsideValue(1)
+
+        mask = otsu_filter.Execute(sitk_img)
+
+        mask = sITK.BinaryMorphologicalClosing(mask, [5, 5, 5])
+        mask = sITK.BinaryMorphologicalOpening(mask, [3, 3, 3])
+
+        mask_np = sITK.GetArrayFromImage(mask).astype(np.float32)
         return image * mask_np, mask_np
 
     # --------------------------------------------------
@@ -150,7 +157,7 @@ class MRIPreprocessor:
 # --------------------------------------------------
 
 def main() -> None:
-    from data_ingestion import BraTSDataIngestion
+    from ingestion.data_ingestion import BraTSDataIngestion
     from config import paths
 
     # Process training data

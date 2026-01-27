@@ -3,10 +3,11 @@ MedRAG-X Configuration File
 VS Code compatible | No API keys required
 """
 
-import os
 import nibabel as nib
 import numpy as np
 from pathlib import Path
+from typing import cast
+from nibabel.nifti1 import Nifti1Image
 from dataclasses import dataclass
 from typing import Tuple, Dict, List, Optional
 import json
@@ -26,7 +27,7 @@ class PathConfig:
     # Project root (safe for VS Code)
     ROOT_DIR: Path = Path(__file__).resolve().parent
 
-    # 🔴 CHANGE THIS PATH TO YOUR BraTS DATASET LOCATION
+    # CHANGE THIS PATH TO YOUR BraTS DATASET LOCATION
     DATA_ROOT_TRAIN: Path = Path("BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData")  # <-- MODIFY THIS
     DATA_ROOT_VAL: Path = Path("BraTS2020_ValidationData/MICCAI_BraTS2020_ValidationData")  # <-- MODIFY THIS
     DATA_ROOT: Path = DATA_ROOT_TRAIN  # Default to training for backward compatibility
@@ -78,7 +79,7 @@ class ModelConfig:
 
     EMBEDDING_DIM: int = 768
 
-    # 🔕 LLM DISABLED (No API keys)
+    # LLM DISABLED (No API keys)
     ENABLE_LLM: bool = False
     LLM_MODEL: str = "microsoft/biogpt"  # Placeholder (Ollama / LM Studio later)
     LLM_MAX_TOKENS: int = 2048
@@ -225,10 +226,11 @@ class BraTSDataIngestion:
         logger.info(f"Found {len(patient_dirs)} patient directories")
         return [d.name for d in patient_dirs]
 
-    def load_nifti(self, filepath: Path) -> np.ndarray:
+    @staticmethod
+    def load_nifti(filepath: Path) -> np.ndarray:
         """Load NIfTI file"""
         try:
-            img = nib.load(filepath)
+            img = cast(Nifti1Image, nib.load(filepath))
             data = img.get_fdata(dtype=np.float32)
             return data
         except Exception as e:
@@ -262,7 +264,8 @@ class BraTSDataIngestion:
             segmentation=segmentation
         )
 
-    def save_metadata(self, patients: List[MRIData], output_path: Path):
+    @staticmethod
+    def save_metadata(patients: List[MRIData], output_path: Path):
         """Save dataset metadata"""
         metadata = {
             "dataset_info": {

@@ -1,15 +1,17 @@
-import os
+import json
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Dict, List, Optional
+
 import nibabel as nib
 import numpy as np
-from pathlib import Path
-from typing import Dict, List, Optional, Tuple
-from dataclasses import dataclass
-import json
 from loguru import logger
+from nibabel import Nifti1Image
 from tqdm import tqdm
 
 # Import your config file (ensure it's in the same folder or in PYTHONPATH)
-from config import paths, BRATS_MODALITIES, BRATS_LABELS
+from config import paths, BRATS_MODALITIES
+
 
 # =========================
 # MRI DATA CONTAINER
@@ -66,11 +68,13 @@ class BraTSDataIngestion:
     # -------------------------
     # Load NIfTI file
     # -------------------------
-    def load_nifti(self, filepath: Path) -> np.ndarray:
+    @staticmethod
+    def load_nifti(filepath: Path) -> np.ndarray:
         try:
-            nii = nib.load(str(filepath))
-            data = nii.get_fdata()
-            return data.astype(np.float32)
+            img = nib.load(str(filepath))
+            if not isinstance(img, Nifti1Image):
+                raise TypeError(f"Expected NIfTI image, got {type(img)} for {filepath}")
+            return np.asarray(img.dataobj, dtype=np.float32)
         except Exception as e:
             logger.error(f"Error loading {filepath}: {e}")
             raise
@@ -123,7 +127,8 @@ class BraTSDataIngestion:
     # -------------------------
     # Validate data
     # -------------------------
-    def validate_data(self, mri_data: MRIData) -> bool:
+    @staticmethod
+    def validate_data(mri_data: MRIData) -> bool:
         shapes = [arr.shape for arr in mri_data.modalities.values()]
         if len(set(shapes)) > 1:
             logger.error(f"Inconsistent shapes for {mri_data.patient_id}: {shapes}")
