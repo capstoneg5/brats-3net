@@ -18,3 +18,7 @@ class ModelConfig:
     MULTIMODAL_EMBEDDING_MODEL = "openai/clip-vit-base-patch32"
 
     EMBEDDING_DIM = 768
+
+
+# singleton instance used everywhere
+model_config = ModelConfig()

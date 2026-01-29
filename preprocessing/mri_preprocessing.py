@@ -111,13 +111,13 @@ class MRIPreprocessor:
 
     @staticmethod
     def skull_strip(image: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
-        sitk_img = sITK.GetImageFromArray(image)
+        sITK_img = sITK.GetImageFromArray(image)
 
         otsu_filter = sITK.OtsuThresholdImageFilter()
         otsu_filter.SetInsideValue(0)
         otsu_filter.SetOutsideValue(1)
 
-        mask = otsu_filter.Execute(sitk_img)
+        mask = otsu_filter.Execute(sITK_img)
 
         mask = sITK.BinaryMorphologicalClosing(mask, [5, 5, 5])
         mask = sITK.BinaryMorphologicalOpening(mask, [3, 3, 3])
@@ -188,13 +188,24 @@ def main() -> None:
     if patient_ids_val:
         preprocessor = MRIPreprocessor()
         processed_count = 0
-        for patient_id in patient_ids_val:
-            sample = ingestion_val.load_patient_data(patient_id)
-            output = preprocessor.preprocess_patient(
+        for patient_id in patient_ids_train:
+            sample = ingestion_train.load_patient_data(patient_id)
+
+            processed = preprocessor.preprocess_patient(
                 sample.modalities,
                 sample.segmentation,
                 augment=False,
             )
+
+            save_path = (
+                    paths.PROJECT_ROOT
+                    / "data"
+                    / "processed"
+                    / "train"
+                    / f"{patient_id}.pt"
+            )
+            save_path.parent.mkdir(parents=True, exist_ok=True)
+            torch.save(processed, save_path)
             processed_count += 1
             if processed_count % 25 == 0:
                 print(f"Processed {processed_count}/{len(patient_ids_val)} validation patients")
