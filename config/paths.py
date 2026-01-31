@@ -19,6 +19,8 @@ class Paths:
     DATA_ROOT_TRAIN: Path = PROJECT_ROOT / "data" / "train"
     DATA_ROOT_VAL: Path = PROJECT_ROOT / "data" / "val"
 
+    PROCESSED_DATA_DIR: Path = PROJECT_ROOT / "data" / "processed"
+
     # -----------------------
     # Artifacts
     # -----------------------

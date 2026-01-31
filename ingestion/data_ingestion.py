@@ -193,6 +193,9 @@ class BraTSDataIngestion:
     # -------------------------
     def save_metadata(self, patient_ids: List[str], output_path: Path = None):
         output_path = output_path or paths.PROCESSED_DATA_DIR / "dataset_metadata.json"
+
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
         stats = self.get_dataset_statistics(patient_ids)
         metadata = {
             'dataset': 'BraTS',
@@ -202,6 +205,7 @@ class BraTSDataIngestion:
         }
         with open(output_path, 'w') as f:
             json.dump(metadata, f, indent=2)
+
         logger.info(f"Metadata saved to {output_path}")
 
 # =========================

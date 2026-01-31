@@ -26,7 +26,7 @@ def load_embeddings_jsonl(jsonl_path: Path) -> Tuple[List[str], np.ndarray, List
             try:
                 obj = json.loads(line)
                 _id = obj["id"]
-                emb = np.array(obj["embedding"], dtype=np.float32)
+                emb = np.array(obj["embeddings"], dtype=np.float32)
                 meta = obj.get("metadata", {})
             except Exception as e:
                 raise ValueError(f"Invalid JSONL at line {line_no}: {e}")

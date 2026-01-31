@@ -7,7 +7,7 @@ What it does (end-to-end):
 2) Load + preprocess MRI modalities (+ seg if available)
 3) (Optional) Run segmentation inference using trained 3D UNet (or use GT seg if present)
 4) Build lesion-centric 3D embeddings (768-d) from lesion cube
-5) Write embeddings to JSONL (id, embedding, metadata)
+5) Write embeddings to JSONL (id, embeddings, metadata)
 6) (Optional) Build/persist vector index (FAISS/Chroma)
 7) (Optional) Run a smoke-search query
 
@@ -50,8 +50,8 @@ from config import paths, model_config, training_config
 from ingestion.data_ingestion import BraTSDataIngestion
 from preprocessing.mri_preprocessing import MRIPreprocessor, MODALITY_KEYS
 from models.segmentation.unet3d import UNet3DSegmenter
-from models.embedding.lesion_embedder_3d import LesionEmbeddingPipeline3D
-from models.embedding.text_embedder import TextEmbedder
+from models.embeddings.lesion_embedder_3d import LesionEmbeddingPipeline3D
+from models.embeddings.text_embedder import TextEmbedder
 from retrival.vector_store import create_vector_store
 
 
@@ -296,7 +296,7 @@ class MedRAGXPipeline:
                 # Embed lesion (3D)
                 vol_np = img_4ch.detach().cpu().numpy().astype(np.float32)  # [4,D,H,W]
 
-                # Build deterministic ID for the lesion embedding (one per patient)
+                # Build deterministic ID for the lesion embeddings (one per patient)
                 emb_id = f"{pid}|lesion_3d|0"
 
                 if emb_id in already_done:
@@ -321,7 +321,7 @@ class MedRAGXPipeline:
                 # Prepare JSONL record
                 record = {
                     "id": emb_id,
-                    "embedding": out.embedding.tolist(),  # 768 floats
+                    "embeddings": out.embedding.tolist(),  # 768 floats
                     "metadata": out.meta,
                 }
 
@@ -378,7 +378,7 @@ class MedRAGXPipeline:
                 obj = json.loads(line)
                 ids.append(obj["id"])
                 metas.append(obj.get("metadata", {}))
-                vecs.append(np.array(obj["embedding"], dtype=np.float32))
+                vecs.append(np.array(obj["embeddings"], dtype=np.float32))
 
         if not ids:
             logger.warning("No embeddings found in JSONL; skipping index build.")

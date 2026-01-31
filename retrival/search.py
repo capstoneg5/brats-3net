@@ -8,7 +8,7 @@ from loguru import logger
 
 from config import paths, model_config
 from retrival.vector_store import create_vector_store
-from models.embedding.text_embedder import TextEmbedder
+from models.embeddings.text_embedder import TextEmbedder
 
 
 def parse_filter(filter_str: Optional[str]) -> Optional[Dict[str, Any]]:

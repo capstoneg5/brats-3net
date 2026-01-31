@@ -9,7 +9,7 @@ from loguru import logger
 
 from config import paths, model_config
 from retrival.vector_store import create_vector_store, SearchResult
-from models.embedding.text_embedder import TextEmbedder
+from models.embeddings.text_embedder import TextEmbedder
 
 
 JsonDict = Dict[str, Any]
@@ -70,7 +70,7 @@ class SearchResponse(BaseModel):
 app = FastAPI(
     title="MedRAG-X API",
     version="1.0.0",
-    description="Semantic search API for lesion-centric 3D embeddings (FAISS/Chroma) + PubMedBERT text query embedding",
+    description="Semantic search API for lesion-centric 3D embeddings (FAISS/Chroma) + PubMedBERT text query embeddings",
 )
 
 # Cache embedder in-memory (typical production pattern)
@@ -138,7 +138,7 @@ def embed_text(req: EmbedTextRequest) -> EmbedTextResponse:
 @app.post("/search", response_model=SearchResponse)
 def search(req: SearchRequest) -> SearchResponse:
     """
-    Text query -> PubMedBERT embedding -> vector store search.
+    Text query -> PubMedBERT embeddings -> vector store search.
     Optionally filter by metadata, e.g. {"type":"lesion_3d"}.
     """
     try:

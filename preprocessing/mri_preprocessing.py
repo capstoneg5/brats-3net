@@ -45,6 +45,7 @@ class MRIPreprocessor:
     def _build_preprocessing_pipeline(self) -> Compose:
         return Compose([
             EnsureChannelFirstd(keys=ALL_KEYS, channel_dim="no_channel", allow_missing_keys=True),
+            # If you want to silence the FutureWarning, you can add labels=None explicitly
             Orientationd(keys=ALL_KEYS, axcodes="RAS", allow_missing_keys=True),
             Spacingd(
                 keys=ALL_KEYS,
@@ -74,8 +75,19 @@ class MRIPreprocessor:
 
     @staticmethod
     def _build_augmentation_pipeline() -> Optional[Compose]:
-        if not training_config.USE_AUGMENTATION:
+        # ✅ Safe default: if config doesn't have USE_AUGMENTATION, augmentation is OFF
+        use_aug = getattr(training_config, "USE_AUGMENTATION", False)
+        if not use_aug:
+            logger.info("Augmentation disabled (training_config.USE_AUGMENTATION is False or missing).")
             return None
+
+        # ✅ Safe defaults for ranges if missing in config
+        rotation_range = getattr(training_config, "ROTATION_RANGE", (0.0, 0.0, 0.0))
+        scale_range = getattr(training_config, "SCALE_RANGE", (0.0, 0.0, 0.0))
+
+        logger.info(
+            f"Augmentation enabled | ROTATION_RANGE={rotation_range} | SCALE_RANGE={scale_range}"
+        )
 
         return Compose([
             RandRotate90d(keys=ALL_KEYS, prob=0.5, spatial_axes=(0, 2)),
@@ -85,8 +97,8 @@ class MRIPreprocessor:
             RandAffined(
                 keys=ALL_KEYS,
                 prob=0.3,
-                rotate_range=training_config.ROTATION_RANGE,
-                scale_range=training_config.SCALE_RANGE,
+                rotate_range=rotation_range,
+                scale_range=scale_range,
                 mode=("bilinear", "bilinear", "bilinear", "bilinear", "nearest"),
             ),
             RandGaussianNoised(
@@ -104,10 +116,13 @@ class MRIPreprocessor:
     @staticmethod
     def normalize_intensity(image: np.ndarray) -> np.ndarray:
         mask = image > 0
+        if not np.any(mask):
+            return image.astype(np.float32)
         mean = image[mask].mean()
         std = image[mask].std()
+        image = image.astype(np.float32)
         image[mask] = (image[mask] - mean) / (std + 1e-8)
-        return image.astype(np.float32)
+        return image
 
     @staticmethod
     def skull_strip(image: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
@@ -146,7 +161,7 @@ class MRIPreprocessor:
 
         data = self.preprocessing_transforms(data)
 
-        if augment and self.augmentation_transforms:
+        if augment and self.augmentation_transforms is not None:
             data = self.augmentation_transforms(data)
 
         return data
@@ -160,7 +175,9 @@ def main() -> None:
     from ingestion.data_ingestion import BraTSDataIngestion
     from config import paths
 
-    # Process training data
+    # ----------------------------
+    # TRAIN
+    # ----------------------------
     print("Processing Training Data for Preprocessing:")
     ingestion_train = BraTSDataIngestion(data_root=paths.DATA_ROOT_TRAIN)
     patient_ids_train = ingestion_train.discover_patients()
@@ -168,9 +185,10 @@ def main() -> None:
     if patient_ids_train:
         preprocessor = MRIPreprocessor()
         processed_count = 0
+
         for patient_id in patient_ids_train:
             sample = ingestion_train.load_patient_data(patient_id)
-            output = preprocessor.preprocess_patient(
+            _ = preprocessor.preprocess_patient(
                 sample.modalities,
                 sample.segmentation,
                 augment=False,
@@ -178,9 +196,12 @@ def main() -> None:
             processed_count += 1
             if processed_count % 50 == 0:
                 print(f"Processed {processed_count}/{len(patient_ids_train)} training patients")
+
         print(f"Total training patients preprocessed: {processed_count}")
 
-    # Process validation data
+    # ----------------------------
+    # VAL
+    # ----------------------------
     print("\nProcessing Validation Data for Preprocessing:")
     ingestion_val = BraTSDataIngestion(data_root=paths.DATA_ROOT_VAL)
     patient_ids_val = ingestion_val.discover_patients()
@@ -188,8 +209,9 @@ def main() -> None:
     if patient_ids_val:
         preprocessor = MRIPreprocessor()
         processed_count = 0
-        for patient_id in patient_ids_train:
-            sample = ingestion_train.load_patient_data(patient_id)
+
+        for patient_id in patient_ids_val:
+            sample = ingestion_val.load_patient_data(patient_id)
 
             processed = preprocessor.preprocess_patient(
                 sample.modalities,
@@ -198,17 +220,19 @@ def main() -> None:
             )
 
             save_path = (
-                    paths.PROJECT_ROOT
-                    / "data"
-                    / "processed"
-                    / "train"
-                    / f"{patient_id}.pt"
+                paths.PROJECT_ROOT
+                / "data"
+                / "processed"
+                / "val"
+                / f"{patient_id}.pt"
             )
             save_path.parent.mkdir(parents=True, exist_ok=True)
             torch.save(processed, save_path)
+
             processed_count += 1
             if processed_count % 25 == 0:
                 print(f"Processed {processed_count}/{len(patient_ids_val)} validation patients")
+
         print(f"Total validation patients preprocessed: {processed_count}")
 
 
