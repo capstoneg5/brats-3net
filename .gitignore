@@ -31,8 +31,8 @@ vector_db/
 data/embeddings/
 
 # Dataset
-data/train/
-data/val/
+data/brats/train/
+data/brats/val/
 
 capstoneg5
 capstoneg5.pub

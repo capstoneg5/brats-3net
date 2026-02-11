@@ -1,0 +1,58 @@
+{
+  "modalities": {
+    "t1": {
+      "original_shape": [
+        128,
+        128,
+        128
+      ],
+      "final_shape": [
+        128,
+        128,
+        128
+      ]
+    },
+    "t1ce": {
+      "original_shape": [
+        128,
+        128,
+        128
+      ],
+      "final_shape": [
+        128,
+        128,
+        128
+      ]
+    },
+    "t2": {
+      "original_shape": [
+        128,
+        128,
+        128
+      ],
+      "final_shape": [
+        128,
+        128,
+        128
+      ]
+    },
+    "flair": {
+      "original_shape": [
+        128,
+        128,
+        128
+      ],
+      "final_shape": [
+        128,
+        128,
+        128
+      ]
+    }
+  },
+  "target_shape": [
+    128,
+    128,
+    128
+  ],
+  "has_seg": true
+}

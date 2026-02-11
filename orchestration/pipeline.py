@@ -1,533 +1,535 @@
 # orchestration/pipeline.py
-"""
-MedRAG-X Orchestration Pipeline (Production-standard)
-
-What it does (end-to-end):
-1) Discover patients (BraTS)
-2) Load + preprocess MRI modalities (+ seg if available)
-3) (Optional) Run segmentation inference using trained 3D UNet (or use GT seg if present)
-4) Build lesion-centric 3D embeddings (768-d) from lesion cube
-5) Write embeddings to JSONL (id, embeddings, metadata)
-6) (Optional) Build/persist vector index (FAISS/Chroma)
-7) (Optional) Run a smoke-search query
-
-Usage examples:
-  # Build embeddings JSONL + build FAISS index
-  python -m orchestration.pipeline run \
-    --split train \
-    --max_patients 200 \
-    --use_pred_mask \
-    --checkpoint models/segmentation/unet3d_best.pt \
-    --write_jsonl \
-    --build_index \
-    --backend faiss
-
-  # Only export embeddings (no index build)
-  python -m orchestration.pipeline run --split val --write_jsonl
-
-  # Smoke-search
-  python -m orchestration.pipeline search \
-    --backend faiss \
-    --query "enhancing tumor with edema in frontal lobe" \
-    --filter '{"type":"lesion_3d"}'
-"""
-
 from __future__ import annotations
 
 import argparse
 import json
-import time
+import os
+import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Optional, List, Dict, Any
 
-import numpy as np
-import torch
-from loguru import logger
+# -----------------------------
+# Config
+# -----------------------------
+@dataclass
+class RunConfig:
+    split: str
+    max_patients: Optional[int]
 
-# Project imports (your modules)
-from config import paths, model_config, training_config
-from ingestion.data_ingestion import BraTSDataIngestion
-from preprocessing.mri_preprocessing import MRIPreprocessor, MODALITY_KEYS
-from models.segmentation.unet3d import UNet3DSegmenter
-from models.embeddings.lesion_embedder_3d import LesionEmbeddingPipeline3D
-from models.embeddings.text_embedder import TextEmbedder
-from retrival.vector_store import create_vector_store
+    # Steps
+    preprocess: bool
+    train_unet: bool
+    infer_unet: bool
+    use_gt_masks: bool
+
+    extract_lesions: bool
+    train_embed: bool
+    embed_all: bool
+
+    build_neo4j: bool
+    run_guarded_rag: bool
+
+    # Paths
+    data_root: Path
+    processed_root: Path
+    artifacts_root: Path
+
+    # Models/artifacts
+    unet_checkpoint: Path
+    embed_checkpoint: Path
+    embeddings_jsonl: Path
+
+    # Neo4j
+    neo4j_uri: str
+    neo4j_user: str
+    neo4j_password: str
+
+    # Guarded RAG query (optional)
+    query_lesion_id: str
+    top_k: int
 
 
-JsonDict = Dict[str, Any]
+def _log(msg: str) -> None:
+    print(msg, flush=True)
 
 
-# ---------------------------
-# Utilities
-# ---------------------------
-def _now_ms() -> int:
-    return int(time.time() * 1000)
-
-
-def _safe_mkdir(p: Path) -> None:
+def _ensure_dir(p: Path) -> None:
     p.mkdir(parents=True, exist_ok=True)
 
 
-def _read_jsonl_ids(jsonl_path: Path) -> set[str]:
+def _file_nonempty(p: Path) -> bool:
+    try:
+        return p.exists() and p.is_file() and p.stat().st_size > 0
+    except Exception:
+        return False
+
+
+def _warn(msg: str) -> None:
+    print(f"⚠️  {msg}", flush=True)
+
+
+# -----------------------------
+# Step implementations (CALL your existing modules here)
+# -----------------------------
+def step_preprocess(cfg: RunConfig) -> None:
+    _log("▶ Step: preprocess")
+    _ensure_dir(cfg.processed_root)
+
+    _log(f"  - data_root={cfg.data_root}")
+    _log(f"  - processed_root={cfg.processed_root}")
+    _log(f"  - split={cfg.split} max_patients={cfg.max_patients}")
+
+    # ✅ Call real preprocessing
+    from src.data.preprocess_brats import preprocess_split
+
+    # If your BraTS folder has subfolders like train/val/test, adjust this:
+    # split_root = cfg.data_root / cfg.split
+    # else keep cfg.data_root as-is.
+    split_root = cfg.data_root / cfg.split
+
+    preprocess_split(
+        data_root=split_root,
+        out_dir=cfg.processed_root / cfg.split,   # keep split separated
+        max_patients=cfg.max_patients,
+    )
+
+    _log("✅ preprocess complete")
+
+
+def step_train_unet(cfg: RunConfig) -> None:
     """
-    Used for resume support: if JSONL already has entries, skip those IDs.
+    Expected work:
+      - Train 3D UNet on processed volumes + GT masks
+      - Save checkpoint to cfg.unet_checkpoint
     """
-    ids: set[str] = set()
-    if not jsonl_path.exists():
-        return ids
-    with jsonl_path.open("r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                obj = json.loads(line)
-                ids.add(obj["id"])
-            except Exception:
-                continue
-    return ids
+    _log("▶ Step: train_unet")
+    _ensure_dir(cfg.unet_checkpoint.parent)
+
+    # TODO: Replace with your real implementation, e.g.:
+    # from src.segmentation.train_unet3d import train_unet3d
+    # train_unet3d(processed_root=cfg.processed_root, split=cfg.split, out_ckpt=cfg.unet_checkpoint)
+    _log(f"  - checkpoint={cfg.unet_checkpoint}")
+    _log("✅ train_unet (stub) complete")
 
 
-def _atomic_append_jsonl(path: Path, obj: JsonDict) -> None:
+def step_infer_unet(cfg: RunConfig) -> None:
     """
-    Append one JSON object per line. Minimal and safe enough for single-process runs.
+    Expected work:
+      - Run inference with trained UNet checkpoint
+      - Produce predicted masks per patient
     """
-    with path.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(obj, ensure_ascii=False) + "\n")
+    _log("▶ Step: infer_unet")
+    # TODO: Replace with your real implementation, e.g.:
+    # from src.segmentation.infer_unet3d import infer_unet3d
+    # infer_unet3d(processed_root=cfg.processed_root, ckpt=cfg.unet_checkpoint, split=cfg.split, out_dir=cfg.artifacts_root/"pred_masks")
+    _log(f"  - using checkpoint={cfg.unet_checkpoint}")
+    _log("✅ infer_unet (stub) complete")
 
 
-def _l2_normalize(x: np.ndarray, eps: float = 1e-12) -> np.ndarray:
-    return x / (np.linalg.norm(x, axis=-1, keepdims=True) + eps)
+def step_extract_lesions(cfg: RunConfig) -> None:
+    _log("▶ Step: extract_lesions")
+
+    from src.lesion.extract_lesions import extract_lesions_for_split
+
+    lesions_out = cfg.artifacts_root / "lesions"
+    _ensure_dir(lesions_out)
+
+    extract_lesions_for_split(
+        processed_root=cfg.processed_root,   # ✅ artifacts/processed (NOT /train)
+        split=cfg.split,                     # ✅ "train"
+        use_gt_masks=cfg.use_gt_masks,       # ✅ True/False
+        out_dir=lesions_out,
+        cube_shape=(32, 32, 32),
+        margin=4,
+        max_patients=cfg.max_patients,
+    )
+
+    _log("✅ extract_lesions complete (real lesions)")
 
 
-def _set_repro(seed: int = 42) -> None:
-    import random
-
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)  # ok if no cuda
-    torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = False
-
-
-def _remap_brats_labels_np(seg: np.ndarray) -> np.ndarray:
+def step_train_embed(cfg: RunConfig) -> None:
     """
-    BraTS labels are {0,1,2,4}. Many pipelines map 4->3 for contiguous classes.
+    Expected work:
+      - Train 3D encoder / contrastive model on lesion cubes
+      - Save checkpoint
     """
-    seg = seg.astype(np.int32, copy=False)
-    seg = np.where(seg == 4, 3, seg)
-    seg = np.clip(seg, 0, 3)
-    return seg.astype(np.uint8)
+    _log("▶ Step: train_embed")
+    _ensure_dir(cfg.embed_checkpoint.parent)
+
+    # TODO: Replace with your real implementation, e.g.:
+    # from src.embeddings.train_embedder import train_embedder
+    # train_embedder(lesions_dir=cfg.artifacts_root/"lesions", out_ckpt=cfg.embed_checkpoint)
+    _log(f"  - embed_checkpoint={cfg.embed_checkpoint}")
+    _log("✅ train_embed (stub) complete")
+
+def step_embed_all(cfg: RunConfig) -> None:
+    """
+    Working minimal implementation:
+      - Reads lesion cubes (*.npy) from artifacts/lesions
+      - Produces deterministic fixed-size embeddings (default 768-d)
+      - Writes JSONL lines: lesion_id, patient_id, embedding, metadata
+
+    Later: replace embedding logic with your trained model forward pass.
+    """
+    _log("▶ Step: embed_all")
+    import json
+    import numpy as np
+    import hashlib
+
+    lesions_dir = cfg.artifacts_root / "lesions"
+    if not lesions_dir.exists():
+        raise RuntimeError(f"Lesions directory not found: {lesions_dir}. Run --extract_lesions first.")
+
+    cube_files = sorted(lesions_dir.glob("lesion*.npy"))
+    if not cube_files:
+        raise RuntimeError(f"No lesion cubes found in {lesions_dir}. Run --extract_lesions first.")
+
+    _ensure_dir(cfg.embeddings_jsonl.parent)
+    _log(f"  - lesions_dir={lesions_dir}")
+    _log(f"  - embeddings_jsonl={cfg.embeddings_jsonl}")
+
+    EMBED_DIM = 768
+
+    def make_embedding(cube: np.ndarray, lesion_id: str) -> List[float]:
+        """
+        Deterministic "embedding" placeholder:
+        - create a stable seed from lesion_id
+        - project cube stats into a fixed vector
+        """
+        # stable seed from lesion_id
+        seed = int(hashlib.md5(lesion_id.encode("utf-8")).hexdigest()[:8], 16)
+        rng = np.random.default_rng(seed)
+
+        # features from cube
+        flat = cube.astype("float32").ravel()
+        feats = np.array([
+            float(flat.mean()),
+            float(flat.std()),
+            float(flat.min()),
+            float(flat.max()),
+            float(np.percentile(flat, 25)),
+            float(np.percentile(flat, 50)),
+            float(np.percentile(flat, 75)),
+        ], dtype="float32")
+
+        # random projection matrix (deterministic due to seed)
+        proj = rng.normal(0, 1, size=(EMBED_DIM, feats.shape[0])).astype("float32")
+        vec = proj @ feats  # (768,)
+        # normalize
+        norm = float(np.linalg.norm(vec) + 1e-8)
+        vec = (vec / norm).astype("float32")
+
+        return vec.tolist()
+
+    written = 0
+    with cfg.embeddings_jsonl.open("w", encoding="utf-8") as f:
+        for path in cube_files:
+            lesion_id = path.stem  # e.g. lesion117
+            cube = np.load(path)
+
+            emb = make_embedding(cube, lesion_id)
+
+            record = {
+                "lesion_id": lesion_id,
+                "patient_id": None,  # fill later when you extract real patient mapping
+                "embedding": emb,
+                "dim": EMBED_DIM,
+                "metadata": {
+                    "source": "placeholder_embedder",
+                    "cube_shape": list(cube.shape),
+                },
+            }
+            f.write(json.dumps(record) + "\n")
+            written += 1
+
+    # sanity: file should be non-empty now
+    size = cfg.embeddings_jsonl.stat().st_size
+    _log(f"  - wrote {written} embeddings, jsonl_size={size} bytes")
+    _log("✅ embed_all complete (real JSONL)")
 
 
-def _select_split_root(split: str) -> Path:
-    split = split.lower().strip()
-    if split == "train":
-        return paths.DATA_ROOT_TRAIN
-    if split == "val":
-        return paths.DATA_ROOT_VAL
-    raise ValueError("split must be 'train' or 'val'")
+def step_build_neo4j(cfg: RunConfig) -> None:
+    """
+    Real implementation:
+      - Read embeddings_jsonl
+      - Upsert Lesion nodes
+      - Store embedding vector on node
+      - Create vector index (if supported)
 
+    Requirements:
+      pip install neo4j
+      Neo4j 5.11+ recommended for VECTOR index
+    """
+    _log("▶ Step: build_neo4j")
+    import json
+    from neo4j import GraphDatabase
 
-# ---------------------------
-# Config dataclass
-# ---------------------------
-@dataclass
-class PipelineConfig:
-    split: str = "train"
-    max_patients: int = 0  # 0 = all
-    seed: int = 42
+    if (not cfg.embeddings_jsonl.exists()) or cfg.embeddings_jsonl.stat().st_size == 0:
+        raise RuntimeError(f"embeddings_jsonl missing/empty: {cfg.embeddings_jsonl}. Run --embed_all first.")
 
-    # Segmentation source
-    use_pred_mask: bool = False
-    checkpoint: Optional[Path] = None
+    _log(f"  - neo4j_uri={cfg.neo4j_uri} user={cfg.neo4j_user}")
+    _log(f"  - embeddings_jsonl={cfg.embeddings_jsonl}")
 
-    # Embedding output
-    cube_size: Tuple[int, int, int] = (64, 64, 64)
-    margin: int = 5
+    driver = GraphDatabase.driver(cfg.neo4j_uri, auth=(cfg.neo4j_user, cfg.neo4j_password))
 
-    # Output controls
-    write_jsonl: bool = True
-    resume: bool = True
+    # ---------- helper: ensure constraints / index ----------
+    def ensure_schema(session):
+        # uniqueness
+        session.run("CREATE CONSTRAINT lesion_id_unique IF NOT EXISTS FOR (l:Lesion) REQUIRE l.lesion_id IS UNIQUE")
 
-    # Index controls
-    build_index: bool = False
-    backend: str = "faiss"  # faiss|chroma
-    metric: str = "cosine"
-    collection: str = "medragx"
+        # vector index (Neo4j 5.11+). If not supported, it will fail -> we catch.
+        # Adjust dims to your JSONL dim.
+        try:
+            session.run("""
+            CREATE VECTOR INDEX lesion_embedding_index IF NOT EXISTS
+            FOR (l:Lesion) ON (l.embedding)
+            OPTIONS {
+              indexConfig: {
+                `vector.dimensions`: 768,
+                `vector.similarity_function`: 'cosine'
+              }
+            }
+            """)
+            _log("  - vector index ensured: lesion_embedding_index")
+        except Exception as e:
+            _log(f"⚠️  Could not create VECTOR INDEX (Neo4j may be older): {e}")
 
-    # Storage locations
-    embeddings_dir: Path = paths.EMBEDDINGS_DIR
-    vector_db_dir: Path = paths.VECTOR_DB_DIR
-
-    # Filtering
-    only_with_seg: bool = False  # skip patients without GT seg (for train)
-
-
-# ---------------------------
-# Core Pipeline
-# ---------------------------
-class MedRAGXPipeline:
-    def __init__(self, cfg: PipelineConfig) -> None:
-        self.cfg = cfg
-        _set_repro(cfg.seed)
-
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        logger.info(f"Device: {self.device}")
-
-        self.data_root = _select_split_root(cfg.split)
-        self.ingestor = BraTSDataIngestion(data_root=self.data_root)
-        self.preprocessor = MRIPreprocessor(target_size=model_config.IMG_SIZE)
-
-        self.lesion_embedder = LesionEmbeddingPipeline3D(
-            device=self.device,
-            cube_size=cfg.cube_size,
+    # ---------- ingest ----------
+    def upsert_one(session, rec: dict):
+        return session.run(
+            """
+            MERGE (l:Lesion {lesion_id: $lesion_id})
+            SET l.patient_id = $patient_id,
+                l.embedding = $embedding,
+                l.dim = $dim,
+                l.source = $source,
+                l.cube_shape = $cube_shape
+            """,
+            lesion_id=rec.get("lesion_id"),
+            patient_id=rec.get("patient_id"),
+            embedding=rec.get("embedding"),
+            dim=rec.get("dim"),
+            source=(rec.get("metadata") or {}).get("source"),
+            cube_shape=(rec.get("metadata") or {}).get("cube_shape"),
         )
 
-        self.seg_model: Optional[UNet3DSegmenter] = None
-        if cfg.use_pred_mask:
-            if not cfg.checkpoint:
-                raise ValueError("use_pred_mask=True requires --checkpoint path")
-            self.seg_model = self._load_segmentation_model(cfg.checkpoint)
+    inserted = 0
+    with driver.session() as session:
+        ensure_schema(session)
 
-        # Outputs
-        _safe_mkdir(cfg.embeddings_dir)
-        _safe_mkdir(cfg.vector_db_dir)
-
-        self.jsonl_path = cfg.embeddings_dir / f"lesion_embeddings_{cfg.split}.jsonl"
-
-    def _load_segmentation_model(self, checkpoint: Path) -> UNet3DSegmenter:
-        if not checkpoint.exists():
-            raise FileNotFoundError(f"Segmentation checkpoint not found: {checkpoint}")
-
-        model = UNet3DSegmenter(
-            in_channels=model_config.SEGMENTATION_IN_CHANNELS,
-            out_channels=model_config.SEGMENTATION_OUT_CHANNELS,
-            device=self.device,
-        )
-        model.setup_training(lr=training_config.LEARNING_RATE)
-
-        ckpt = torch.load(checkpoint, map_location=self.device)
-        state = ckpt.get("model_state_dict", ckpt)
-        model.model.load_state_dict(state)
-        model.model.eval()
-
-        logger.info(f"Loaded segmentation checkpoint: {checkpoint}")
-        return model
-
-    def _predict_mask(self, image_4ch: torch.Tensor) -> np.ndarray:
-        """
-        image_4ch: torch.Tensor [4, D, H, W]
-        Returns numpy mask [D,H,W] in {0,1,2,3}
-        """
-        assert self.seg_model is not None
-        img = image_4ch.unsqueeze(0).to(self.device)  # [1,4,D,H,W]
-
-        with torch.no_grad():
-            logits = self.seg_model.model(img)  # [1,4,D,H,W]
-            pred = torch.argmax(logits, dim=1)  # [1,D,H,W]
-            pred_np = pred.squeeze(0).detach().cpu().numpy().astype(np.uint8)
-
-        # already contiguous 0..3 (because model outputs 4 channels)
-        return pred_np
-
-    @staticmethod
-    def _build_image_tensor(processed: Dict[str, torch.Tensor]) -> torch.Tensor:
-        """
-        processed contains t1,t2,flair,t1ce each [1,D,H,W] after EnsureChannelFirstd.
-        Returns: [4,D,H,W]
-        """
-        return torch.cat([processed[k] for k in MODALITY_KEYS], dim=0).float()
-
-    def run(self) -> Path:
-        logger.info(f"Starting pipeline | split={self.cfg.split} root={self.data_root}")
-        patient_ids = self.ingestor.discover_patients()
-
-        if self.cfg.max_patients and self.cfg.max_patients > 0:
-            patient_ids = patient_ids[: self.cfg.max_patients]
-
-        logger.info(f"Patients to process: {len(patient_ids)}")
-
-        already_done: set[str] = set()
-        if self.cfg.resume and self.cfg.write_jsonl:
-            already_done = _read_jsonl_ids(self.jsonl_path)
-            if already_done:
-                logger.info(f"Resume enabled: {len(already_done)} embeddings already in JSONL")
-
-        processed_count = 0
-        embedded_count = 0
-        skipped_no_lesion = 0
-        skipped_no_seg = 0
-        skipped_resume = 0
-        errors = 0
-
-        t0 = _now_ms()
-
-        for pid in patient_ids:
-            try:
-                sample = self.ingestor.load_patient_data(pid)
-
-                if self.cfg.only_with_seg and sample.segmentation is None:
-                    skipped_no_seg += 1
-                    continue
-
-                # Preprocess
-                processed = self.preprocessor.preprocess_patient(
-                    modalities=sample.modalities,
-                    segmentation=sample.segmentation,
-                    augment=False,
-                )
-
-                img_4ch = self._build_image_tensor(processed)  # [4,D,H,W]
-
-                # Choose mask source
-                if self.cfg.use_pred_mask:
-                    mask = self._predict_mask(img_4ch)
-                else:
-                    if "seg" not in processed:
-                        skipped_no_seg += 1
-                        continue
-                    # processed["seg"] is torch tensor [1,D,H,W] (or similar)
-                    seg_np = processed["seg"].squeeze(0).detach().cpu().numpy()
-                    mask = _remap_brats_labels_np(seg_np)
-
-                # Embed lesion (3D)
-                vol_np = img_4ch.detach().cpu().numpy().astype(np.float32)  # [4,D,H,W]
-
-                # Build deterministic ID for the lesion embeddings (one per patient)
-                emb_id = f"{pid}|lesion_3d|0"
-
-                if emb_id in already_done:
-                    skipped_resume += 1
-                    continue
-
-                out = self.lesion_embedder.embed_from_volume_and_mask(
-                    volume_4ch=vol_np,
-                    mask=mask,
-                    patient_id=pid,
-                    margin=self.cfg.margin,
-                )
-
-                processed_count += 1
-
-                if out is None:
-                    skipped_no_lesion += 1
-                    continue
-
-                embedded_count += 1
-
-                # Prepare JSONL record
-                record = {
-                    "id": emb_id,
-                    "embeddings": out.embedding.tolist(),  # 768 floats
-                    "metadata": out.meta,
-                }
-
-                if self.cfg.write_jsonl:
-                    _atomic_append_jsonl(self.jsonl_path, record)
-
-                if embedded_count % 25 == 0:
-                    logger.info(
-                        f"Progress: embedded={embedded_count} processed={processed_count} "
-                        f"skipped(no_lesion)={skipped_no_lesion} skipped(no_seg)={skipped_no_seg} errors={errors}"
-                    )
-
-            except Exception as e:
-                errors += 1
-                logger.exception(f"Error processing patient {pid}: {e}")
-
-        dt = (_now_ms() - t0) / 1000.0
-        logger.info(
-            "Pipeline finished | "
-            f"processed={processed_count}, embedded={embedded_count}, "
-            f"skipped_resume={skipped_resume}, skipped_no_lesion={skipped_no_lesion}, "
-            f"skipped_no_seg={skipped_no_seg}, errors={errors}, time_sec={dt:.1f}"
-        )
-
-        # Optional index build
-        if self.cfg.build_index:
-            self.build_index(self.jsonl_path)
-
-        return self.jsonl_path
-
-    def build_index(self, jsonl_path: Path) -> None:
-        if not jsonl_path.exists():
-            raise FileNotFoundError(f"Embeddings JSONL not found: {jsonl_path}")
-
-        store = create_vector_store(
-            backend=self.cfg.backend,
-            persist_dir=self.cfg.vector_db_dir,
-            dim=model_config.EMBEDDING_DIM,
-            metric=self.cfg.metric,
-            collection_name=self.cfg.collection,
-        )
-
-        ids: List[str] = []
-        metas: List[JsonDict] = []
-        vecs: List[np.ndarray] = []
-
-        logger.info(f"Building index | backend={self.cfg.backend} metric={self.cfg.metric} from {jsonl_path}")
-
-        with jsonl_path.open("r", encoding="utf-8") as f:
+        with cfg.embeddings_jsonl.open("r", encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
                 if not line:
                     continue
-                obj = json.loads(line)
-                ids.append(obj["id"])
-                metas.append(obj.get("metadata", {}))
-                vecs.append(np.array(obj["embeddings"], dtype=np.float32))
+                rec = json.loads(line)
+                upsert_one(session, rec)
+                inserted += 1
 
-        if not ids:
-            logger.warning("No embeddings found in JSONL; skipping index build.")
-            return
-
-        mat = np.stack(vecs, axis=0).astype(np.float32)
-        batch = 512
-        for i in range(0, len(ids), batch):
-            store.add(ids=ids[i:i + batch], vectors=mat[i:i + batch], metadatas=metas[i:i + batch])
-            logger.info(f"Indexed {min(i + batch, len(ids))}/{len(ids)}")
-
-        store.persist()
-        logger.info(f"✅ Index persisted | total_vectors={store.size} | dir={self.cfg.vector_db_dir}")
+    driver.close()
+    _log(f"✅ build_neo4j complete (ingested {inserted} lesions)")
 
 
-# ---------------------------
-# Search Command
-# ---------------------------
-def run_search(
-    backend: str,
-    metric: str,
-    collection: str,
-    persist_dir: Path,
-    query: str,
-    top_k: int,
-    filter_json: Optional[str],
-) -> None:
-    store = create_vector_store(
-        backend=backend,
-        persist_dir=persist_dir,
-        dim=model_config.EMBEDDING_DIM,
-        metric=metric,
-        collection_name=collection,
-    )
+def step_run_guarded_rag(cfg: RunConfig) -> None:
+    """
+    Calls guarded RAG workflow:
+      Query → Guardrails → Retrieval → LLM → Validation → Confidence → Metrics
+    """
+    _log("▶ Step: run_guarded_rag")
 
-    if store.size == 0:
-        logger.warning("Vector store is empty. Run pipeline with --build_index first.")
-        return
+    # Prefer subprocess so args can be passed cleanly.
+    import subprocess
 
-    embedder = TextEmbedder(model_name=model_config.TEXT_EMBEDDING_MODEL)
-    q_vec = embedder.embed(query).embeddings[0]  # (768,)
+    cmd = [
+        sys.executable,
+        "-m",
+        "scripts.run_guarded_rag_query",
+        "--lesion_id",
+        cfg.query_lesion_id,
+        "--top_k",
+        str(cfg.top_k),
+        "--min_score",
+        "0.85",
+    ]
 
-    filt = json.loads(filter_json) if filter_json else None
-    results = store.search(query_vector=q_vec, top_k=top_k, filter=filt)
+    _log(f"  - running: {' '.join(cmd)}")
+    subprocess.check_call(cmd)
 
-    print("\n====================")
-    print("Query:", query)
-    print("TopK:", top_k)
-    print("Filter:", filt)
-    print("====================\n")
-
-    for i, r in enumerate(results, start=1):
-        meta = r.metadata or {}
-        print(f"{i:02d}. id={r.id}  score={r.score:.4f}")
-        # compact meta
-        keys = ["type", "patient_id", "tumor_volume_voxels", "bbox", "centroid_zyx", "cube_size"]
-        compact = {k: meta.get(k) for k in keys if k in meta}
-        print("    meta:", compact if compact else meta)
-
-    print()
+    _log("✅ run_guarded_rag complete")
 
 
-# ---------------------------
+# -----------------------------
 # CLI
-# ---------------------------
-def _parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser("medragx-pipeline")
+# -----------------------------
+def build_argparser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(prog="python -m orchestration.pipeline", description="End-to-end Capstone Pipeline")
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    run = sub.add_parser("run", help="Run ingest→preprocess→(optional seg)→3D lesion embed→(optional index)")
-    run.add_argument("--split", choices=["train", "val"], default="train")
-    run.add_argument("--max_patients", type=int, default=0)
-    run.add_argument("--seed", type=int, default=42)
+    run = sub.add_parser("run", help="Run the pipeline")
+    run.add_argument("--split", choices=["train", "val", "test"], default="train")
+    run.add_argument("--max_patients", type=int, default=None)
 
-    run.add_argument("--use_pred_mask", action="store_true", help="Use predicted mask from UNet instead of GT seg")
-    run.add_argument("--checkpoint", type=str, default=None, help="Segmentation checkpoint path (.pt)")
+    # Steps
+    run.add_argument("--preprocess", action="store_true", help="Run preprocessing/normalization")
+    run.add_argument("--train_unet", action="store_true", help="Train 3D UNet")
+    run.add_argument("--infer_unet", action="store_true", help="Infer masks using 3D UNet ckpt")
+    run.add_argument("--use_gt_masks", action="store_true", help="Use GT masks for lesion extraction (skip pred masks)")
+    run.add_argument("--extract_lesions", action="store_true", help="Extract lesions + facts + ROI cubes")
+    run.add_argument("--train_embed", action="store_true", help="Train lesion embedding model")
+    run.add_argument("--embed_all", action="store_true", help="Generate embeddings JSONL for all lesions")
+    run.add_argument("--build_neo4j", action="store_true", help="Ingest lesions + embeddings into Neo4j")
+    run.add_argument("--run_guarded_rag", action="store_true", help="Run guarded clinical RAG query workflow")
 
-    run.add_argument("--cube_size", type=str, default="64,64,64", help="Lesion cube size D,H,W")
-    run.add_argument("--margin", type=int, default=5)
+    # Paths (defaults are safe; adjust to your repo)
+    run.add_argument("--data_root", type=Path, default=Path("data/brats"))
+    run.add_argument("--processed_root", type=Path, default=Path("artifacts/processed"))
+    run.add_argument("--artifacts_root", type=Path, default=Path("artifacts"))
 
-    run.add_argument("--write_jsonl", action="store_true", help="Write embeddings JSONL")
-    run.add_argument("--no_resume", action="store_true", help="Disable resume; re-embed even if JSONL already has IDs")
-    run.add_argument("--only_with_seg", action="store_true", help="Skip patients without GT seg (useful for train GT)")
+    run.add_argument("--unet_checkpoint", type=Path, default=Path("artifacts/checkpoints/unet3d_best.pt"))
+    run.add_argument("--embed_checkpoint", type=Path, default=Path("artifacts/checkpoints/embedder_best.pt"))
+    run.add_argument("--embeddings_jsonl", type=Path, default=Path("artifacts/embeddings/lesion_embeddings.jsonl"))
 
-    run.add_argument("--build_index", action="store_true", help="Build vector index after exporting embeddings")
-    run.add_argument("--backend", choices=["faiss", "chroma"], default="faiss")
-    run.add_argument("--metric", choices=["cosine", "l2"], default="cosine")
-    run.add_argument("--collection", type=str, default="medragx")
+    # Neo4j
+    run.add_argument("--neo4j_uri", default=os.getenv("NEO4J_URI", "bolt://127.0.0.1:7687"))
+    run.add_argument("--neo4j_user", default=os.getenv("NEO4J_USER", "neo4j"))
+    run.add_argument("--neo4j_password", default=os.getenv("NEO4J_PASSWORD", "neo4j123"))
 
-    run.add_argument("--embeddings_dir", type=str, default=str(paths.EMBEDDINGS_DIR))
-    run.add_argument("--vector_db_dir", type=str, default=str(paths.VECTOR_DB_DIR))
+    # Guarded RAG params (optional; your guarded script can ignore or use)
+    run.add_argument("--query_lesion_id", default="lesion3")
+    run.add_argument("--top_k", type=int, default=5)
 
-    search = sub.add_parser("search", help="Search vector store using a text query")
-    search.add_argument("--backend", choices=["faiss", "chroma"], default="faiss")
-    search.add_argument("--metric", choices=["cosine", "l2"], default="cosine")
-    search.add_argument("--collection", type=str, default="medragx")
-    search.add_argument("--persist_dir", type=str, default=str(paths.VECTOR_DB_DIR))
-    search.add_argument("--query", type=str, required=True)
-    search.add_argument("--top_k", type=int, default=10)
-    search.add_argument("--filter", type=str, default=None, help='JSON filter e.g. \'{"type":"lesion_3d"}\'')
+    return p
 
-    return p.parse_args()
+
+def parse_cfg(args: argparse.Namespace) -> RunConfig:
+    return RunConfig(
+        split=args.split,
+        max_patients=args.max_patients,
+        preprocess=args.preprocess,
+        train_unet=args.train_unet,
+        infer_unet=args.infer_unet,
+        use_gt_masks=args.use_gt_masks,
+        extract_lesions=args.extract_lesions,
+        train_embed=args.train_embed,
+        embed_all=args.embed_all,
+        build_neo4j=args.build_neo4j,
+        run_guarded_rag=args.run_guarded_rag,
+        data_root=args.data_root,
+        processed_root=args.processed_root,
+        artifacts_root=args.artifacts_root,
+        unet_checkpoint=args.unet_checkpoint,
+        embed_checkpoint=args.embed_checkpoint,
+        embeddings_jsonl=args.embeddings_jsonl,
+        neo4j_uri=args.neo4j_uri,
+        neo4j_user=args.neo4j_user,
+        neo4j_password=args.neo4j_password,
+        query_lesion_id=args.query_lesion_id,
+        top_k=args.top_k,
+    )
+
+
+def run_pipeline(cfg: RunConfig) -> None:
+    _log("\n==============================")
+    _log(" Capstone End-to-End Pipeline ")
+    _log("==============================")
+    _log(json.dumps({
+        "split": cfg.split,
+        "max_patients": cfg.max_patients,
+        "steps": {
+            "preprocess": cfg.preprocess,
+            "train_unet": cfg.train_unet,
+            "infer_unet": cfg.infer_unet,
+            "use_gt_masks": cfg.use_gt_masks,
+            "extract_lesions": cfg.extract_lesions,
+            "train_embed": cfg.train_embed,
+            "embed_all": cfg.embed_all,
+            "build_neo4j": cfg.build_neo4j,
+            "run_guarded_rag": cfg.run_guarded_rag,
+        }
+    }, indent=2))
+
+    _ensure_dir(cfg.artifacts_root)
+    _ensure_dir(cfg.processed_root)
+
+    if cfg.preprocess:
+        step_preprocess(cfg)
+
+    if cfg.train_unet:
+        step_train_unet(cfg)
+
+    # ---------------------------------------------------------
+    # Inference handling (smart auto-run)
+    # ---------------------------------------------------------
+
+    # Always define first → avoids linter warning
+    need_pred_masks: bool = cfg.extract_lesions and (not cfg.use_gt_masks)
+
+    if need_pred_masks:
+        # User explicitly requested inference
+        if cfg.infer_unet:
+            step_infer_unet(cfg)
+
+        # Auto-run inference if checkpoint already exists
+        else:
+            if cfg.unet_checkpoint.exists():
+                _warn(
+                    "--extract_lesions without --use_gt_masks → "
+                    "auto-running infer_unet because checkpoint exists."
+                )
+                step_infer_unet(cfg)
+            else:
+                raise RuntimeError(
+                    "Predicted masks required but UNet checkpoint not found.\n"
+                    "Fix by one of the following:\n"
+                    "  • pass --use_gt_masks\n"
+                    "  • run --train_unet first\n"
+                    "  • provide valid --unet_checkpoint path"
+                )
+
+    else:
+        # Normal behavior: only run if user explicitly asked
+        if cfg.infer_unet and not cfg.use_gt_masks:
+            step_infer_unet(cfg)
+
+    if cfg.extract_lesions:
+        step_extract_lesions(cfg)
+
+    if cfg.train_embed:
+        step_train_embed(cfg)
+
+    if cfg.embed_all:
+        step_embed_all(cfg)
+
+    if cfg.build_neo4j:
+        step_build_neo4j(cfg)
+
+    if cfg.run_guarded_rag:
+        step_run_guarded_rag(cfg)
+
+    _log("\n✅ Pipeline completed.\n")
 
 
 def main() -> None:
-    args = _parse_args()
+    parser = build_argparser()
+    args = parser.parse_args()
 
     if args.cmd == "run":
-        cube = tuple(int(x) for x in args.cube_size.split(","))
-        if len(cube) != 3:
-            raise ValueError("--cube_size must be like '64,64,64'")
+        cfg = parse_cfg(args)
 
-        cfg = PipelineConfig(
-            split=args.split,
-            max_patients=args.max_patients,
-            seed=args.seed,
-            use_pred_mask=args.use_pred_mask,
-            checkpoint=Path(args.checkpoint) if args.checkpoint else None,
-            cube_size=(cube[0], cube[1], cube[2]),
-            margin=args.margin,
-            write_jsonl=args.write_jsonl,
-            resume=(not args.no_resume),
-            build_index=args.build_index,
-            backend=args.backend,
-            metric=args.metric,
-            collection=args.collection,
-            embeddings_dir=Path(args.embeddings_dir),
-            vector_db_dir=Path(args.vector_db_dir),
-            only_with_seg=args.only_with_seg,
-        )
+        # Convenience: if user passes the "end-to-end" flags you mentioned,
+        # they probably also want preprocess + extract_lesions + embed_all.
+        # (We won't auto-enable anything; just warn if missing.)
+        if cfg.train_unet and not cfg.preprocess:
+            _log("  Hint: --train_unet usually needs --preprocess first.")
+        if cfg.train_embed and not cfg.extract_lesions:
+            _log(" Hint: --train_embed usually needs --extract_lesions first.")
+        if cfg.build_neo4j and not cfg.embed_all:
+            _log("  Hint: --build_neo4j usually needs --embed_all first.")
 
-        pipe = MedRAGXPipeline(cfg)
-        jsonl_path = pipe.run()
-
-        if cfg.write_jsonl:
-            logger.info(f"Embeddings JSONL: {jsonl_path}")
-
-    elif args.cmd == "search":
-        run_search(
-            backend=args.backend,
-            metric=args.metric,
-            collection=args.collection,
-            persist_dir=Path(args.persist_dir),
-            query=args.query,
-            top_k=args.top_k,
-            filter_json=args.filter,
-        )
+        run_pipeline(cfg)
     else:
-        raise ValueError(f"Unknown command: {args.cmd}")
+        raise SystemExit(f"Unknown command: {args.cmd}")
 
 
 if __name__ == "__main__":
