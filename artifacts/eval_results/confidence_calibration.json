@@ -1,0 +1,11 @@
+{
+  "n_evaluated": 20,
+  "brier_score": 0.009999999999999998,
+  "brier_interpretation": "excellent",
+  "confidence_distribution": {
+    "High": 20,
+    "Moderate": 0,
+    "Low": 0
+  },
+  "outcome_rate": 1.0
+}

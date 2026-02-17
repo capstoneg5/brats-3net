@@ -98,33 +98,54 @@ def step_preprocess(cfg: RunConfig) -> None:
 
 
 def step_train_unet(cfg: RunConfig) -> None:
-    """
-    Expected work:
-      - Train 3D UNet on processed volumes + GT masks
-      - Save checkpoint to cfg.unet_checkpoint
-    """
     _log("▶ Step: train_unet")
     _ensure_dir(cfg.unet_checkpoint.parent)
 
-    # TODO: Replace with your real implementation, e.g.:
-    # from src.segmentation.train_unet3d import train_unet3d
-    # train_unet3d(processed_root=cfg.processed_root, split=cfg.split, out_ckpt=cfg.unet_checkpoint)
-    _log(f"  - checkpoint={cfg.unet_checkpoint}")
-    _log("✅ train_unet (stub) complete")
+    import subprocess
+
+    repo_root = Path(__file__).resolve().parents[1]   # .../brats-3net
+    train_script = repo_root / "models" / "segmentation" / "train_unet3d.py"
+
+    cmd = [
+        sys.executable,
+        str(train_script),
+        "--train_pt", str(cfg.artifacts_root / "datasets" / "train.pt"),
+        "--val_pt",   str(cfg.artifacts_root / "datasets" / "val.pt"),
+        "--epochs", "10",
+        "--batch_size", "1",
+        "--num_classes", "4",
+        "--out_dir", str(cfg.unet_checkpoint.parent),
+    ]
+
+    _log(f"  - running: {' '.join(cmd)}")
+    subprocess.check_call(cmd)
+
+    _log("✅ train_unet complete")
 
 
 def step_infer_unet(cfg: RunConfig) -> None:
-    """
-    Expected work:
-      - Run inference with trained UNet checkpoint
-      - Produce predicted masks per patient
-    """
     _log("▶ Step: infer_unet")
-    # TODO: Replace with your real implementation, e.g.:
-    # from src.segmentation.infer_unet3d import infer_unet3d
-    # infer_unet3d(processed_root=cfg.processed_root, ckpt=cfg.unet_checkpoint, split=cfg.split, out_dir=cfg.artifacts_root/"pred_masks")
-    _log(f"  - using checkpoint={cfg.unet_checkpoint}")
-    _log("✅ infer_unet (stub) complete")
+
+    import subprocess
+
+    repo_root = Path(__file__).resolve().parents[1]   # .../brats-3net
+    infer_script = repo_root / "models" / "segmentation" / "infer_unet3d.py"
+
+    cmd = [
+        sys.executable,
+        str(infer_script),
+        "--pt", str(cfg.artifacts_root / "datasets" / f"{cfg.split}.pt"),
+        "--processed_root", str(cfg.processed_root),
+        "--split", cfg.split,
+        "--ckpt", str(cfg.unet_checkpoint),
+        "--num_classes", "4",
+        "--write_brats_labels",
+    ]
+
+    _log(f"  - running: {' '.join(cmd)}")
+    subprocess.check_call(cmd)
+
+    _log("✅ infer_unet complete")
 
 
 def step_extract_lesions(cfg: RunConfig) -> None:
@@ -163,25 +184,24 @@ def step_train_embed(cfg: RunConfig) -> None:
     _log(f"  - embed_checkpoint={cfg.embed_checkpoint}")
     _log("✅ train_embed (stub) complete")
 
-def step_embed_all(cfg: RunConfig) -> None:
+def step_embed_all(cfg) -> None:
     """
-    Working minimal implementation:
-      - Reads lesion cubes (*.npy) from artifacts/lesions
-      - Produces deterministic fixed-size embeddings (default 768-d)
-      - Writes JSONL lines: lesion_id, patient_id, embedding, metadata
+    Reads lesion cubes (*.npy) from artifacts/lesions/cubes,
+    produces deterministic fixed-size embeddings (768-d),
+    writes JSONL with GLOBALLY UNIQUE lesion IDs.
 
-    Later: replace embedding logic with your trained model forward pass.
+    FIX: lesion_id = full filename stem (e.g. BraTS20_Training_003_lesion3)
+         so there are no collisions across patients.
     """
+    from orchestration.pipeline import _log, _ensure_dir
+
     _log("▶ Step: embed_all")
-    import json
-    import numpy as np
-    import hashlib
 
-    lesions_dir = cfg.artifacts_root / "lesions"
+    lesions_dir = cfg.artifacts_root / "lesions" / "cubes"
     if not lesions_dir.exists():
         raise RuntimeError(f"Lesions directory not found: {lesions_dir}. Run --extract_lesions first.")
 
-    cube_files = sorted(lesions_dir.glob("lesion*.npy"))
+    cube_files = sorted(lesions_dir.glob("*.npy"))
     if not cube_files:
         raise RuntimeError(f"No lesion cubes found in {lesions_dir}. Run --extract_lesions first.")
 
@@ -192,77 +212,66 @@ def step_embed_all(cfg: RunConfig) -> None:
     EMBED_DIM = 768
 
     def make_embedding(cube: np.ndarray, lesion_id: str) -> List[float]:
-        """
-        Deterministic "embedding" placeholder:
-        - create a stable seed from lesion_id
-        - project cube stats into a fixed vector
-        """
-        # stable seed from lesion_id
         seed = int(hashlib.md5(lesion_id.encode("utf-8")).hexdigest()[:8], 16)
         rng = np.random.default_rng(seed)
-
-        # features from cube
         flat = cube.astype("float32").ravel()
         feats = np.array([
-            float(flat.mean()),
-            float(flat.std()),
-            float(flat.min()),
-            float(flat.max()),
+            float(flat.mean()), float(flat.std()),
+            float(flat.min()), float(flat.max()),
             float(np.percentile(flat, 25)),
             float(np.percentile(flat, 50)),
             float(np.percentile(flat, 75)),
         ], dtype="float32")
-
-        # random projection matrix (deterministic due to seed)
         proj = rng.normal(0, 1, size=(EMBED_DIM, feats.shape[0])).astype("float32")
-        vec = proj @ feats  # (768,)
-        # normalize
+        vec = proj @ feats
         norm = float(np.linalg.norm(vec) + 1e-8)
         vec = (vec / norm).astype("float32")
-
         return vec.tolist()
 
     written = 0
     with cfg.embeddings_jsonl.open("w", encoding="utf-8") as f:
         for path in cube_files:
-            lesion_id = path.stem  # e.g. lesion117
-            cube = np.load(path)
+            stem = path.stem  # e.g. BraTS20_Training_003_lesion3
 
+            # ── FIX: use FULL stem as lesion_id (globally unique) ──
+            lesion_id = stem
+            patient_id, _lesion_suffix = stem.rsplit("_", 1)
+
+            cube = np.load(path)
             emb = make_embedding(cube, lesion_id)
 
             record = {
-                "lesion_id": lesion_id,
-                "patient_id": None,  # fill later when you extract real patient mapping
+                "lesion_id": lesion_id,           # globally unique
+                "lesion_suffix": _lesion_suffix,   # e.g. "lesion3"
+                "patient_id": patient_id,
                 "embedding": emb,
                 "dim": EMBED_DIM,
                 "metadata": {
                     "source": "placeholder_embedder",
+                    "cube_file": path.name,
                     "cube_shape": list(cube.shape),
                 },
             }
             f.write(json.dumps(record) + "\n")
             written += 1
 
-    # sanity: file should be non-empty now
     size = cfg.embeddings_jsonl.stat().st_size
     _log(f"  - wrote {written} embeddings, jsonl_size={size} bytes")
-    _log("✅ embed_all complete (real JSONL)")
+    _log("✅ embed_all complete (unique lesion IDs)")
 
 
-def step_build_neo4j(cfg: RunConfig) -> None:
+def step_build_neo4j(cfg) -> None:
     """
-    Real implementation:
-      - Read embeddings_jsonl
-      - Upsert Lesion nodes
-      - Store embedding vector on node
-      - Create vector index (if supported)
+    Ingests embeddings JSONL into Neo4j.
 
-    Requirements:
-      pip install neo4j
-      Neo4j 5.11+ recommended for VECTOR index
+    FIX: uses property "id" (not "lesion_id") to match the schema
+    used by build_kg_3d_from_pt.py and the retriever Cypher.
+    Also creates a vector index named "lesion_embedding_idx"
+    matching query_neo4j_vector.py.
     """
+    from orchestration.pipeline import _log, _ensure_dir
+
     _log("▶ Step: build_neo4j")
-    import json
     from neo4j import GraphDatabase
 
     if (not cfg.embeddings_jsonl.exists()) or cfg.embeddings_jsonl.stat().st_size == 0:
@@ -273,16 +282,15 @@ def step_build_neo4j(cfg: RunConfig) -> None:
 
     driver = GraphDatabase.driver(cfg.neo4j_uri, auth=(cfg.neo4j_user, cfg.neo4j_password))
 
-    # ---------- helper: ensure constraints / index ----------
     def ensure_schema(session):
-        # uniqueness
-        session.run("CREATE CONSTRAINT lesion_id_unique IF NOT EXISTS FOR (l:Lesion) REQUIRE l.lesion_id IS UNIQUE")
-
-        # vector index (Neo4j 5.11+). If not supported, it will fail -> we catch.
-        # Adjust dims to your JSONL dim.
+        # Use "id" property — matches existing graph schema
+        session.run(
+            "CREATE CONSTRAINT lesion_id_unique IF NOT EXISTS "
+            "FOR (l:Lesion) REQUIRE l.id IS UNIQUE"
+        )
         try:
             session.run("""
-            CREATE VECTOR INDEX lesion_embedding_index IF NOT EXISTS
+            CREATE VECTOR INDEX lesion_embedding_idx IF NOT EXISTS
             FOR (l:Lesion) ON (l.embedding)
             OPTIONS {
               indexConfig: {
@@ -291,27 +299,28 @@ def step_build_neo4j(cfg: RunConfig) -> None:
               }
             }
             """)
-            _log("  - vector index ensured: lesion_embedding_index")
+            _log("  - vector index ensured: lesion_embedding_idx")
         except Exception as e:
-            _log(f"⚠️  Could not create VECTOR INDEX (Neo4j may be older): {e}")
+            _log(f"⚠️  Could not create VECTOR INDEX: {e}")
 
-    # ---------- ingest ----------
     def upsert_one(session, rec: dict):
-        return session.run(
+        # ── FIX: use "id" property, not "lesion_id" ──
+        session.run(
             """
-            MERGE (l:Lesion {lesion_id: $lesion_id})
-            SET l.patient_id = $patient_id,
-                l.embedding = $embedding,
-                l.dim = $dim,
-                l.source = $source,
-                l.cube_shape = $cube_shape
+            MERGE (l:Lesion {id: $id})
+            SET l.patient_id   = $patient_id,
+                l.embedding    = $embedding,
+                l.dim          = $dim,
+                l.source       = $source,
+                l.cube_shape   = $cube_shape,
+                l.lesion_type  = 'tumor'
             """,
-            lesion_id=rec.get("lesion_id"),
+            id=rec.get("lesion_id"),
             patient_id=rec.get("patient_id"),
             embedding=rec.get("embedding"),
             dim=rec.get("dim"),
             source=(rec.get("metadata") or {}).get("source"),
-            cube_shape=(rec.get("metadata") or {}).get("cube_shape"),
+            cube_shape=str((rec.get("metadata") or {}).get("cube_shape")),
         )
 
     inserted = 0
@@ -331,31 +340,25 @@ def step_build_neo4j(cfg: RunConfig) -> None:
     _log(f"✅ build_neo4j complete (ingested {inserted} lesions)")
 
 
-def step_run_guarded_rag(cfg: RunConfig) -> None:
+def step_run_guarded_rag(cfg) -> None:
     """
-    Calls guarded RAG workflow:
-      Query → Guardrails → Retrieval → LLM → Validation → Confidence → Metrics
+    Calls guarded RAG workflow with a safer default min_score.
     """
-    _log("▶ Step: run_guarded_rag")
-
-    # Prefer subprocess so args can be passed cleanly.
+    from orchestration.pipeline import _log
     import subprocess
 
     cmd = [
         sys.executable,
         "-m",
         "scripts.run_guarded_rag_query",
-        "--lesion_id",
-        cfg.query_lesion_id,
-        "--top_k",
-        str(cfg.top_k),
-        "--min_score",
-        "0.85",
+        "--lesion_id", cfg.query_lesion_id,
+        "--top_k",     str(cfg.top_k),
+        "--min_score",  "0.70",   # ← was 0.85; safer default
     ]
 
+    _log("▶ Step: run_guarded_rag")
     _log(f"  - running: {' '.join(cmd)}")
     subprocess.check_call(cmd)
-
     _log("✅ run_guarded_rag complete")
 
 

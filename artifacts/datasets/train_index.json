@@ -1,0 +1,4442 @@
+[
+  {
+    "patient_id": "BraTS20_Training_074",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_074/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_074/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_074/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_074/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_074/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_075",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_075/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_075/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_075/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_075/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_075/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_076",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_076/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_076/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_076/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_076/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_076/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_077",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_077/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_077/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_077/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_077/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_077/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_078",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_078/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_078/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_078/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_078/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_078/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_079",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_079/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_079/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_079/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_079/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_079/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_080",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_080/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_080/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_080/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_080/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_080/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_081",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_081/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_081/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_081/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_081/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_081/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_082",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_082/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_082/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_082/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_082/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_082/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_083",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_083/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_083/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_083/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_083/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_083/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_084",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_084/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_084/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_084/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_084/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_084/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_085",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_085/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_085/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_085/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_085/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_085/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_086",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_086/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_086/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_086/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_086/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_086/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_087",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_087/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_087/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_087/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_087/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_087/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_088",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_088/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_088/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_088/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_088/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_088/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_089",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_089/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_089/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_089/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_089/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_089/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_090",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_090/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_090/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_090/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_090/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_090/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_091",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_091/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_091/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_091/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_091/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_091/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_092",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_092/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_092/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_092/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_092/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_092/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_093",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_093/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_093/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_093/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_093/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_093/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_094",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_094/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_094/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_094/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_094/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_094/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_095",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_095/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_095/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_095/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_095/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_095/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_096",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_096/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_096/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_096/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_096/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_096/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_097",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_097/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_097/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_097/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_097/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_097/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_098",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_098/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_098/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_098/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_098/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_098/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_099",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_099/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_099/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_099/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_099/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_099/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_100",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_100/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_100/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_100/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_100/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_100/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_101",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_101/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_101/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_101/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_101/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_101/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_102",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_102/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_102/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_102/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_102/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_102/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_103",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_103/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_103/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_103/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_103/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_103/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_104",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_104/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_104/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_104/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_104/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_104/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_105",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_105/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_105/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_105/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_105/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_105/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_106",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_106/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_106/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_106/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_106/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_106/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_107",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_107/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_107/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_107/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_107/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_107/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_108",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_108/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_108/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_108/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_108/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_108/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_109",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_109/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_109/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_109/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_109/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_109/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_110",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_110/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_110/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_110/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_110/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_110/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_111",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_111/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_111/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_111/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_111/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_111/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_112",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_112/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_112/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_112/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_112/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_112/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_113",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_113/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_113/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_113/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_113/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_113/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_114",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_114/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_114/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_114/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_114/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_114/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_115",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_115/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_115/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_115/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_115/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_115/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_116",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_116/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_116/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_116/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_116/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_116/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_117",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_117/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_117/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_117/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_117/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_117/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_118",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_118/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_118/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_118/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_118/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_118/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_119",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_119/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_119/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_119/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_119/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_119/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_120",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_120/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_120/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_120/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_120/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_120/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_121",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_121/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_121/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_121/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_121/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_121/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_122",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_122/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_122/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_122/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_122/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_122/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_123",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_123/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_123/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_123/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_123/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_123/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_124",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_124/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_124/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_124/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_124/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_124/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_125",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_125/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_125/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_125/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_125/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_125/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_126",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_126/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_126/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_126/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_126/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_126/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_127",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_127/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_127/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_127/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_127/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_127/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_128",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_128/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_128/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_128/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_128/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_128/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_129",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_129/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_129/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_129/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_129/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_129/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_130",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_130/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_130/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_130/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_130/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_130/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_131",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_131/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_131/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_131/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_131/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_131/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_132",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_132/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_132/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_132/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_132/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_132/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_133",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_133/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_133/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_133/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_133/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_133/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_134",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_134/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_134/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_134/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_134/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_134/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_135",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_135/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_135/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_135/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_135/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_135/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_136",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_136/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_136/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_136/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_136/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_136/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_137",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_137/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_137/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_137/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_137/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_137/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_138",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_138/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_138/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_138/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_138/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_138/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_139",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_139/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_139/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_139/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_139/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_139/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_140",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_140/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_140/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_140/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_140/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_140/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_141",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_141/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_141/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_141/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_141/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_141/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_142",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_142/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_142/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_142/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_142/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_142/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_143",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_143/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_143/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_143/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_143/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_143/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_144",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_144/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_144/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_144/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_144/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_144/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_145",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_145/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_145/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_145/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_145/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_145/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_146",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_146/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_146/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_146/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_146/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_146/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_147",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_147/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_147/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_147/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_147/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_147/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_148",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_148/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_148/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_148/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_148/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_148/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_149",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_149/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_149/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_149/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_149/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_149/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_150",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_150/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_150/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_150/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_150/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_150/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_151",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_151/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_151/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_151/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_151/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_151/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_152",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_152/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_152/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_152/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_152/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_152/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_153",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_153/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_153/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_153/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_153/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_153/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_154",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_154/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_154/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_154/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_154/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_154/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_155",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_155/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_155/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_155/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_155/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_155/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_156",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_156/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_156/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_156/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_156/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_156/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_157",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_157/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_157/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_157/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_157/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_157/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_158",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_158/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_158/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_158/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_158/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_158/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_159",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_159/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_159/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_159/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_159/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_159/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_160",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_160/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_160/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_160/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_160/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_160/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_161",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_161/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_161/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_161/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_161/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_161/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_162",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_162/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_162/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_162/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_162/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_162/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_163",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_163/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_163/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_163/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_163/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_163/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_164",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_164/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_164/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_164/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_164/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_164/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_165",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_165/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_165/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_165/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_165/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_165/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_166",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_166/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_166/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_166/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_166/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_166/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_167",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_167/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_167/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_167/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_167/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_167/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_168",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_168/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_168/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_168/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_168/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_168/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_169",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_169/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_169/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_169/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_169/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_169/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_170",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_170/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_170/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_170/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_170/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_170/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_171",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_171/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_171/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_171/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_171/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_171/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_172",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_172/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_172/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_172/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_172/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_172/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_173",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_173/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_173/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_173/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_173/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_173/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_174",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_174/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_174/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_174/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_174/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_174/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_175",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_175/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_175/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_175/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_175/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_175/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_176",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_176/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_176/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_176/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_176/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_176/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_177",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_177/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_177/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_177/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_177/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_177/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_178",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_178/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_178/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_178/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_178/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_178/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_179",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_179/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_179/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_179/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_179/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_179/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_180",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_180/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_180/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_180/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_180/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_180/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_181",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_181/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_181/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_181/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_181/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_181/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_182",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_182/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_182/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_182/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_182/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_182/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_183",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_183/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_183/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_183/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_183/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_183/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_184",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_184/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_184/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_184/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_184/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_184/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_185",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_185/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_185/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_185/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_185/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_185/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_186",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_186/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_186/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_186/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_186/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_186/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_187",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_187/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_187/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_187/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_187/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_187/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_188",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_188/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_188/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_188/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_188/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_188/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_189",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_189/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_189/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_189/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_189/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_189/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_190",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_190/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_190/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_190/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_190/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_190/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_191",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_191/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_191/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_191/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_191/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_191/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_192",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_192/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_192/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_192/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_192/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_192/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_193",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_193/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_193/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_193/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_193/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_193/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_194",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_194/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_194/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_194/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_194/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_194/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_195",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_195/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_195/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_195/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_195/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_195/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_196",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_196/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_196/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_196/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_196/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_196/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_197",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_197/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_197/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_197/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_197/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_197/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_198",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_198/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_198/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_198/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_198/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_198/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_199",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_199/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_199/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_199/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_199/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_199/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_200",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_200/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_200/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_200/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_200/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_200/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_201",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_201/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_201/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_201/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_201/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_201/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_202",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_202/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_202/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_202/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_202/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_202/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_203",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_203/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_203/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_203/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_203/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_203/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_204",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_204/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_204/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_204/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_204/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_204/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_205",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_205/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_205/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_205/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_205/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_205/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_206",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_206/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_206/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_206/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_206/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_206/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_207",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_207/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_207/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_207/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_207/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_207/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_208",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_208/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_208/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_208/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_208/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_208/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_209",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_209/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_209/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_209/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_209/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_209/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_210",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_210/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_210/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_210/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_210/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_210/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_211",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_211/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_211/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_211/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_211/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_211/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_212",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_212/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_212/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_212/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_212/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_212/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_213",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_213/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_213/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_213/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_213/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_213/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_214",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_214/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_214/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_214/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_214/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_214/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_215",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_215/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_215/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_215/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_215/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_215/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_216",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_216/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_216/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_216/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_216/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_216/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_217",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_217/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_217/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_217/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_217/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_217/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_218",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_218/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_218/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_218/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_218/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_218/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_219",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_219/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_219/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_219/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_219/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_219/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_220",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_220/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_220/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_220/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_220/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_220/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_221",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_221/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_221/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_221/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_221/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_221/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_222",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_222/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_222/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_222/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_222/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_222/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_223",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_223/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_223/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_223/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_223/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_223/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_224",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_224/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_224/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_224/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_224/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_224/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_225",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_225/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_225/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_225/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_225/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_225/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_226",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_226/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_226/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_226/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_226/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_226/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_227",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_227/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_227/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_227/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_227/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_227/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_228",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_228/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_228/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_228/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_228/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_228/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_229",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_229/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_229/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_229/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_229/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_229/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_230",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_230/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_230/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_230/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_230/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_230/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_231",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_231/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_231/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_231/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_231/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_231/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_232",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_232/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_232/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_232/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_232/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_232/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_233",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_233/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_233/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_233/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_233/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_233/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_234",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_234/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_234/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_234/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_234/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_234/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_235",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_235/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_235/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_235/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_235/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_235/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_236",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_236/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_236/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_236/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_236/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_236/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_237",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_237/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_237/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_237/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_237/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_237/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_238",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_238/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_238/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_238/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_238/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_238/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_239",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_239/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_239/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_239/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_239/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_239/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_240",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_240/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_240/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_240/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_240/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_240/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_241",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_241/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_241/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_241/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_241/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_241/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_242",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_242/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_242/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_242/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_242/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_242/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_243",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_243/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_243/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_243/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_243/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_243/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_244",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_244/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_244/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_244/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_244/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_244/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_245",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_245/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_245/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_245/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_245/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_245/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_246",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_246/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_246/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_246/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_246/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_246/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_247",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_247/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_247/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_247/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_247/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_247/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_248",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_248/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_248/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_248/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_248/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_248/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_249",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_249/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_249/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_249/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_249/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_249/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_250",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_250/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_250/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_250/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_250/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_250/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_251",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_251/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_251/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_251/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_251/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_251/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_252",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_252/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_252/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_252/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_252/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_252/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_253",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_253/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_253/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_253/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_253/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_253/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_254",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_254/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_254/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_254/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_254/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_254/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_255",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_255/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_255/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_255/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_255/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_255/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_256",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_256/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_256/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_256/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_256/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_256/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_257",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_257/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_257/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_257/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_257/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_257/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_258",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_258/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_258/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_258/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_258/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_258/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_259",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_259/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_259/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_259/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_259/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_259/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_260",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_260/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_260/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_260/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_260/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_260/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_261",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_261/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_261/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_261/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_261/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_261/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_262",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_262/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_262/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_262/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_262/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_262/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_263",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_263/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_263/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_263/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_263/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_263/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_264",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_264/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_264/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_264/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_264/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_264/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_265",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_265/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_265/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_265/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_265/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_265/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_266",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_266/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_266/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_266/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_266/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_266/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_267",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_267/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_267/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_267/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_267/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_267/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_268",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_268/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_268/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_268/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_268/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_268/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_269",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_269/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_269/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_269/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_269/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_269/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_270",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_270/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_270/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_270/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_270/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_270/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_271",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_271/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_271/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_271/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_271/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_271/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_272",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_272/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_272/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_272/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_272/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_272/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_273",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_273/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_273/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_273/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_273/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_273/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_274",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_274/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_274/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_274/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_274/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_274/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_275",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_275/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_275/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_275/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_275/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_275/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_276",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_276/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_276/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_276/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_276/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_276/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_277",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_277/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_277/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_277/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_277/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_277/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_278",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_278/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_278/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_278/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_278/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_278/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_279",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_279/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_279/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_279/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_279/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_279/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_280",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_280/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_280/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_280/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_280/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_280/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_281",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_281/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_281/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_281/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_281/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_281/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_282",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_282/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_282/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_282/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_282/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_282/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_283",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_283/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_283/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_283/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_283/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_283/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_284",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_284/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_284/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_284/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_284/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_284/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_285",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_285/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_285/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_285/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_285/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_285/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_286",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_286/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_286/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_286/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_286/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_286/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_287",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_287/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_287/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_287/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_287/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_287/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_288",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_288/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_288/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_288/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_288/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_288/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_289",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_289/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_289/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_289/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_289/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_289/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_290",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_290/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_290/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_290/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_290/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_290/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_291",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_291/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_291/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_291/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_291/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_291/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_292",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_292/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_292/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_292/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_292/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_292/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_293",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_293/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_293/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_293/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_293/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_293/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_294",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_294/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_294/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_294/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_294/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_294/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_295",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_295/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_295/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_295/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_295/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_295/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_296",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_296/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_296/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_296/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_296/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_296/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_297",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_297/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_297/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_297/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_297/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_297/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_298",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_298/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_298/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_298/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_298/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_298/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_299",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_299/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_299/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_299/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_299/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_299/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_300",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_300/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_300/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_300/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_300/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_300/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_301",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_301/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_301/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_301/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_301/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_301/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_302",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_302/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_302/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_302/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_302/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_302/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_303",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_303/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_303/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_303/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_303/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_303/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_304",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_304/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_304/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_304/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_304/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_304/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_305",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_305/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_305/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_305/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_305/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_305/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_306",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_306/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_306/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_306/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_306/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_306/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_307",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_307/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_307/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_307/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_307/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_307/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_308",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_308/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_308/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_308/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_308/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_308/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_309",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_309/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_309/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_309/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_309/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_309/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_310",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_310/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_310/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_310/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_310/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_310/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_311",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_311/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_311/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_311/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_311/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_311/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_312",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_312/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_312/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_312/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_312/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_312/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_313",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_313/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_313/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_313/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_313/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_313/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_314",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_314/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_314/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_314/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_314/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_314/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_315",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_315/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_315/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_315/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_315/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_315/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_316",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_316/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_316/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_316/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_316/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_316/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_317",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_317/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_317/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_317/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_317/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_317/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_318",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_318/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_318/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_318/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_318/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_318/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_319",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_319/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_319/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_319/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_319/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_319/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_320",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_320/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_320/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_320/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_320/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_320/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_321",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_321/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_321/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_321/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_321/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_321/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_322",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_322/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_322/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_322/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_322/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_322/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_323",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_323/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_323/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_323/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_323/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_323/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_324",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_324/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_324/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_324/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_324/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_324/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_325",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_325/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_325/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_325/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_325/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_325/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_326",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_326/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_326/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_326/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_326/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_326/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_327",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_327/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_327/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_327/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_327/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_327/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_328",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_328/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_328/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_328/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_328/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_328/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_329",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_329/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_329/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_329/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_329/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_329/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_330",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_330/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_330/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_330/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_330/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_330/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_331",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_331/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_331/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_331/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_331/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_331/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_332",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_332/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_332/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_332/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_332/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_332/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_333",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_333/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_333/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_333/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_333/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_333/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_334",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_334/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_334/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_334/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_334/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_334/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_335",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_335/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_335/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_335/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_335/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_335/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_336",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_336/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_336/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_336/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_336/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_336/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_337",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_337/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_337/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_337/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_337/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_337/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_338",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_338/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_338/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_338/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_338/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_338/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_339",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_339/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_339/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_339/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_339/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_339/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_340",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_340/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_340/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_340/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_340/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_340/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_341",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_341/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_341/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_341/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_341/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_341/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_342",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_342/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_342/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_342/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_342/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_342/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_343",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_343/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_343/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_343/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_343/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_343/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_344",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_344/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_344/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_344/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_344/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_344/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_345",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_345/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_345/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_345/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_345/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_345/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_346",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_346/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_346/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_346/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_346/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_346/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_347",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_347/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_347/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_347/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_347/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_347/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_348",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_348/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_348/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_348/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_348/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_348/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_349",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_349/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_349/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_349/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_349/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_349/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_350",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_350/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_350/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_350/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_350/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_350/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_351",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_351/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_351/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_351/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_351/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_351/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_352",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_352/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_352/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_352/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_352/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_352/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_353",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_353/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_353/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_353/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_353/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_353/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_354",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_354/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_354/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_354/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_354/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_354/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_355",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_355/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_355/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_355/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_355/flair.npy"
+    },
+    "seg_path": null,
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_356",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_356/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_356/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_356/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_356/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_356/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_357",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_357/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_357/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_357/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_357/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_357/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_358",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_358/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_358/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_358/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_358/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_358/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_359",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_359/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_359/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_359/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_359/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_359/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_360",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_360/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_360/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_360/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_360/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_360/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_361",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_361/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_361/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_361/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_361/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_361/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_362",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_362/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_362/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_362/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_362/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_362/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_363",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_363/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_363/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_363/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_363/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_363/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_364",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_364/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_364/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_364/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_364/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_364/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_365",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_365/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_365/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_365/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_365/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_365/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_366",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_366/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_366/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_366/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_366/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_366/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_367",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_367/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_367/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_367/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_367/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_367/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_368",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_368/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_368/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_368/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_368/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_368/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  },
+  {
+    "patient_id": "BraTS20_Training_369",
+    "x_paths": {
+      "t1": "brats-3net/artifacts/processed/train/BraTS20_Training_369/t1.npy",
+      "t1ce": "brats-3net/artifacts/processed/train/BraTS20_Training_369/t1ce.npy",
+      "t2": "brats-3net/artifacts/processed/train/BraTS20_Training_369/t2.npy",
+      "flair": "brats-3net/artifacts/processed/train/BraTS20_Training_369/flair.npy"
+    },
+    "seg_path": "brats-3net/artifacts/processed/train/BraTS20_Training_369/seg.npy",
+    "shape": [
+      128,
+      128,
+      128
+    ]
+  }
+]

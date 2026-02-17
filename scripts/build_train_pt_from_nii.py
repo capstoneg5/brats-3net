@@ -6,7 +6,10 @@ import numpy as np
 from tqdm import tqdm
 
 # 🔽 RAW TRAINING DATA LOCATION
-TRAIN_RAW = Path("data/train")
+
+ROOT = Path(__file__).resolve().parents[2]
+TRAIN_RAW = ROOT / "data" / "brats" / "train"
+#TRAIN_RAW = Path("data/train")
 
 # 🔽 OUTPUT PROCESSED DATA
 OUT_DIR = Path("data/processed/train")

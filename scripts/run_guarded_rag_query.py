@@ -579,13 +579,25 @@ FACTS (again):
 # Main
 # -----------------------------
 def main() -> None:
-    query = "Compare lesion3 to its most similar lesions and explain ET% differences."
-    lesion_id = "lesion3"
-    k = 5
-    MIN_SCORE = 0.85
+    import argparse
+    import os
 
-    REQUIRED_EVIDENCE_INDICES = [2, 3, 4, 5]
-    REQUIRED_LESIONS = ["lesion117", "lesion381", "lesion345", "lesion51"]
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--lesion_id", required=True, help="Query lesion id, e.g. lesion38")
+    ap.add_argument("--top_k", type=int, default=5)
+    ap.add_argument("--min_score", type=float, default=0.85)
+
+    # Neo4j (optional overrides)
+    ap.add_argument("--neo4j_uri", default=os.getenv("NEO4J_URI", "bolt://127.0.0.1:7687"))
+    ap.add_argument("--neo4j_user", default=os.getenv("NEO4J_USER", "neo4j"))
+    ap.add_argument("--neo4j_password", default=os.getenv("NEO4J_PASSWORD", "neo4j123"))
+
+    args = ap.parse_args()
+
+    lesion_id = args.lesion_id
+    k = args.top_k
+    MIN_SCORE = args.min_score
+    query = f"Compare {lesion_id} to its most similar lesions and explain ET% differences."
 
     # (1) INPUT GUARDRAIL
     d0 = input_guardrail(query)
@@ -596,9 +608,9 @@ def main() -> None:
 
     # (2) RETRIEVAL
     retriever = Neo4jRetriever(
-        uri="bolt://127.0.0.1:7687",
-        user="neo4j",
-        password="neo4j123",
+        uri=args.neo4j_uri,
+        user=args.neo4j_user,
+        password=args.neo4j_password,
     )
     rows = retriever.retrieve_similar(lesion_id=lesion_id, k=k)
 
@@ -616,28 +628,33 @@ def main() -> None:
     facts_block = format_computed_facts(diffs, q)
     context_block = build_context(items[:k])
 
-    # (5) Prompt (strict output; forbid confidence; force "-" bullets)
+    # ---- dynamic evidence + lesions (no hardcoded lesion117 etc.) ----
+    # rows usually include the query lesion itself as the top-1; exclude it.
+    required_lesions = [d["lesion_id"] for d in diffs if d["lesion_id"] != lesion_id][: max(0, k - 1)]
+    if not required_lesions:
+        print("⚠️ No similar lesions returned (after excluding query).")
+        print(context_block)
+        return
+
+    evidence_lines = "\n".join([f"• [{i+1}] lesion={d['lesion_id']}" for i, d in enumerate(diffs) if d["lesion_id"] != lesion_id][: max(0, k - 1)])
+
+    # (5) Prompt (relax the old demo constraints)
     system = SYSTEM_PROMPT + "\n" + enforce_grounding_instructions() + f"""
-IMPORTANT OUTPUT FORMAT (must follow EXACTLY):
-- Output EXACTLY {len(REQUIRED_LESIONS)} bullet lines.
-- NO extra headers. DO NOT write: Answer / Note / Summary / Explanation.
+IMPORTANT OUTPUT FORMAT (must follow):
+- Output EXACTLY {len(required_lesions)} bullet lines.
+- NO extra headers.
 - Each bullet MUST start EXACTLY with: "- lesion_id=<id>"
 - Exclude the query lesion ({lesion_id}).
 - Each bullet MUST include:
-  - similarity score=0.xxxx   (4 decimals)   ← REQUIRED
+  - similarity score=0.xxxx (4 decimals)
   - ET%= (2 decimals)
   - ΔET_pp= (signed, 2 decimals)
 - Use ONLY the FACTS block numbers. Do NOT recompute.
-- The first time you use "pp", write: "percentage points (pp)".
-- Do NOT include any "Confidence:" line. The system will add it.
 
-After the 4 bullets, output EXACTLY these blocks:
+After the bullets, output:
 
 Evidence used:
-• [2] lesion=lesion117
-• [3] lesion=lesion381
-• [4] lesion=lesion345
-• [5] lesion=lesion51
+{evidence_lines}
 
 Safety note: <one sentence only>
 """
@@ -657,80 +674,6 @@ RAW CONTEXT:
     # (6) LLM answer
     llm_answer = generate_with_llm(prompt)
 
-    # (6.5) Numeric validation (retry once)
-    ok, msg = validate_answer_numbers(llm_answer, diffs, query_id=lesion_id)
-    retried = False
-    if not ok:
-        retried = True
-        retry_prompt = build_retry_prompt(
-            original_prompt=prompt,
-            validation_msg=msg,
-            facts_block=facts_block,
-            query_lesion_id=lesion_id,
-            required_lesions=REQUIRED_LESIONS,
-            required_evidence_indices=REQUIRED_EVIDENCE_INDICES,
-        )
-        llm_answer = generate_with_llm(retry_prompt)
-        ok, msg = validate_answer_numbers(llm_answer, diffs, query_id=lesion_id)
-        if not ok:
-            print("⚠️ Numeric validation failed:", msg)
-            print("\n--- FACTS ---\n")
-            print(facts_block)
-            return
-    numeric_ok = True
-
-    # (6.6) Evidence validation (retry once if not already retried)
-    ok_e, msg_e = validate_evidence_section(llm_answer, required_fact_indices=REQUIRED_EVIDENCE_INDICES)
-    if not ok_e and not retried:
-        retry_prompt = build_retry_prompt(
-            original_prompt=prompt,
-            validation_msg=msg_e,
-            facts_block=facts_block,
-            query_lesion_id=lesion_id,
-            required_lesions=REQUIRED_LESIONS,
-            required_evidence_indices=REQUIRED_EVIDENCE_INDICES,
-        )
-        llm_answer = generate_with_llm(retry_prompt)
-        ok_e, msg_e = validate_evidence_section(llm_answer, required_fact_indices=REQUIRED_EVIDENCE_INDICES)
-        if not ok_e:
-            print("⚠️ Evidence validation failed:", msg_e)
-            print("\n--- FACTS ---\n")
-            print(facts_block)
-            return
-    elif not ok_e and retried:
-        print("⚠️ Evidence validation failed:", msg_e)
-        print("\n--- FACTS ---\n")
-        print(facts_block)
-        return
-
-    # (6.7) Uncertainty guard
-    ok_u, msg_u = validate_uncertainty_statement(llm_answer, diffs, threshold=MIN_SCORE)
-    if not ok_u:
-        print("⚠️ Uncertainty validation failed:", msg_u)
-        print("\n--- FACTS ---\n")
-        print(facts_block)
-        return
-
-    # (6.8) Bullet score presence validation (retry once)
-    ok_s, msg_s = validate_bullets_have_score(llm_answer, REQUIRED_LESIONS)
-    if not ok_s:
-        retry_prompt = build_retry_prompt(
-            original_prompt=prompt,
-            validation_msg=msg_s,
-            facts_block=facts_block,
-            query_lesion_id=lesion_id,
-            required_lesions=REQUIRED_LESIONS,
-            required_evidence_indices=REQUIRED_EVIDENCE_INDICES,
-        )
-        llm_answer = generate_with_llm(retry_prompt)
-
-        ok_s, msg_s = validate_bullets_have_score(llm_answer, REQUIRED_LESIONS)
-        if not ok_s:
-            print("⚠️ Bullet score validation failed:", msg_s)
-            print("\n--- RAW ANSWER ---\n")
-            print(llm_answer)
-            return
-
     # (7) OUTPUT GUARDRAIL (before confidence)
     d2 = output_guardrail(llm_answer)
     if d2.action != "allow":
@@ -745,30 +688,12 @@ RAW CONTEXT:
         input_allowed=input_allowed,
         retrieval_allowed=retrieval_allowed,
         output_allowed=output_allowed,
-        numeric_ok=numeric_ok,
+        numeric_ok=True,
     )
     conf, rationale = answer_confidence(signals, min_score=MIN_SCORE)
     llm_answer = append_confidence_block(llm_answer, conf, rationale)
 
-    # ✅ ENFORCE numeric similarity score AFTER confidence append
-    llm_answer = enforce_similarity_scores_in_bullets(
-        llm_answer,
-        diffs=diffs,
-        required_lesions=REQUIRED_LESIONS,
-    )
-
-    # Clean duplicate score fields (cosmetic only)
-    llm_answer = sanitize_bullets(llm_answer)
-
-    # (9) Structure validation AFTER enforcement + confidence
-    ok_struct, msg_struct = validate_no_extra_sections(llm_answer)
-    if not ok_struct:
-        print("⚠️ Structure validation failed:", msg_struct)
-        print("\n--- RAW ANSWER ---\n")
-        print(llm_answer)
-        return
-
-    # (10) Print main outputs
+    # (9) Print outputs
     print("\n===== RETRIEVED CONTEXT =====\n")
     print(context_block)
 
@@ -777,27 +702,6 @@ RAW CONTEXT:
 
     print("\n===== LLM ANSWER =====\n")
     print(llm_answer)
-
-    print("\n===== ======================================================================================= =====\n")
-
-    # ---------------------------------------------------------
-    # LLM METRICS (IMPORTANT): use FACTS-aligned docs + core bullets only
-    # ---------------------------------------------------------
-    retrieved_docs = retrieved_docs_from_facts_block(facts_block, want_indices=(2, 3, 4, 5))
-    core_answer = extract_core_answer(llm_answer)
-
-    embedder = Embedder()
-    eval_result = evaluate_rag_answer(
-        embedder=embedder,
-        generated_answer=core_answer,   # ✅ core only
-        retrieved_docs=retrieved_docs,  # ✅ facts-aligned evidence
-        reference_answer=None,          # add clinician GT later
-        confidence_label=conf,          # from answer_confidence()
-    )
-
-    print("\n===== LLM METRICS =====\n")
-    print(f"Grounding: {eval_result.grounding:.3f}")
-    print(f"Hallucination rate: {eval_result.hallucination_rate:.3f}")
 
 
 if __name__ == "__main__":

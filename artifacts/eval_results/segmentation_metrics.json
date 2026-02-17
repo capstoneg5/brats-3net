@@ -1,0 +1,4 @@
+{
+  "error": "No pred_seg.npy found. Run --infer_unet first.",
+  "patients": 0
+}

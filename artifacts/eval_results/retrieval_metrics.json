@@ -1,0 +1,12 @@
+{
+  "n_queries": 20,
+  "top_k": 5,
+  "recall_at_5_mean": 1.0,
+  "recall_at_5_std": 0.0,
+  "mrr_mean": 1.0,
+  "mrr_std": 0.0,
+  "precision_at_5_mean": 1.0,
+  "similarity_score_mean": 0.9990383166074753,
+  "similarity_score_min": 0.9964681267738342,
+  "similarity_score_max": 0.9998180866241455
+}

@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-02-17 08:37:50",
+  "retrieval": {
+    "n_queries": 20,
+    "top_k": 5,
+    "recall_at_5_mean": 1.0,
+    "recall_at_5_std": 0.0,
+    "mrr_mean": 1.0,
+    "mrr_std": 0.0,
+    "precision_at_5_mean": 1.0,
+    "similarity_score_mean": 0.9990383166074753,
+    "similarity_score_min": 0.9964681267738342,
+    "similarity_score_max": 0.9998180866241455
+  },
+  "rag_quality": {
+    "n_samples": 5,
+    "n_successful": 5,
+    "n_errors": 0,
+    "mean_top_score": 0.9999999761581421,
+    "mean_n_retrieved": 5.0,
+    "data_completeness_rate": 1.0,
+    "region_coverage_rate": 1.0,
+    "per_query": [
+      {
+        "lesion_id": "lesion39",
+        "n_retrieved": 5,
+        "n_non_self": 4,
+        "top_score": 1.0,
+        "min_score": 0.9995341300964355,
+        "score_spread": 0.0004658699035644531,
+        "data_complete": true,
+        "has_regions": true,
+        "has_centroids": true
+      },
+      {
+        "lesion_id": "lesion45",
+        "n_retrieved": 5,
+        "n_non_self": 4,
+        "top_score": 1.0,
+        "min_score": 0.9986620545387268,
+        "score_spread": 0.0013379454612731934,
+        "data_complete": true,
+        "has_regions": true,
+        "has_centroids": true
+      },
+      {
+        "lesion_id": "lesion57",
+        "n_retrieved": 5,
+        "n_non_self": 4,
+        "top_score": 1.0,
+        "min_score": 0.999459981918335,
+        "score_spread": 0.0005400180816650391,
+        "data_complete": true,
+        "has_regions": true,
+        "has_centroids": true
+      },
+      {
+        "lesion_id": "lesion21",
+        "n_retrieved": 5,
+        "n_non_self": 4,
+        "top_score": 0.9999999403953552,
+        "min_score": 0.9994540810585022,
+        "score_spread": 0.0005458593368530273,
+        "data_complete": true,
+        "has_regions": true,
+        "has_centroids": true
+      },
+      {
+        "lesion_id": "lesion3",
+        "n_retrieved": 5,
+        "n_non_self": 4,
+        "top_score": 0.9999999403953552,
+        "min_score": 0.9995465278625488,
+        "score_spread": 0.0004534125328063965,
+        "data_complete": true,
+        "has_regions": true,
+        "has_centroids": true
+      }
+    ]
+  },
+  "confidence_calibration": {
+    "n_evaluated": 20,
+    "brier_score": 0.009999999999999998,
+    "brier_interpretation": "excellent",
+    "confidence_distribution": {
+      "High": 20,
+      "Moderate": 0,
+      "Low": 0
+    },
+    "outcome_rate": 1.0
+  }
+}
