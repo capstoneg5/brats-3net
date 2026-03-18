@@ -147,6 +147,28 @@ Raw datasets, preprocessed tensors, FAISS indexes, Neo4j CSV exports, checkpoint
 
 For the exact raw-data layout and regeneration commands, see [DATASETS.md](/Users/esai/Documents/capstoneg5/brats-3net/DATASETS.md).
 
+## Project Screenshots
+
+### Streamlit UI
+
+![Main UI 1](docs/screenshots/final_ui_1.png)
+![Main UI 2](docs/screenshots/final_ui_2.png)
+
+### RAG Query Results
+
+![RAG Query 1](docs/screenshots/final_rag_query_1.png)
+![RAG Query 2](docs/screenshots/final_rag_query_2.png)
+![RAG Query 3](docs/screenshots/final_rag_query_3.png)
+
+### RAG Dashboard
+
+![RAG Dashboard](docs/screenshots/final_rag_dashboard.png)
+
+### Ethical Guardrails
+
+![Ethical Guardrail Role](docs/screenshots/final_ethical_guard_role.png)
+![Ethical Guardrail Purpose](docs/screenshots/final_ethical_guard_purpose.png)
+
 ▶️ Training
     python training/trainer.py --config training/config.yaml
 
