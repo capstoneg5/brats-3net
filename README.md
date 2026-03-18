@@ -1,4 +1,3 @@
-```md
 # 🧠 MedRAG-X
 AI-Driven Brain Tumor Segmentation & Medical Knowledge Retrieval Platform
 
