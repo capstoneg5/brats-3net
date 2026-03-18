@@ -141,6 +141,12 @@ FLAIR
 3️⃣ Install dependencies
     pip install -r requirements.txt
 
+### Regenerating Local Data
+
+Raw datasets, preprocessed tensors, FAISS indexes, Neo4j CSV exports, checkpoints, and other generated artifacts are intentionally excluded from Git.
+
+For the exact raw-data layout and regeneration commands, see [DATASETS.md](/Users/esai/Documents/capstoneg5/brats-3net/DATASETS.md).
+
 ▶️ Training
     python training/trainer.py --config training/config.yaml
 
