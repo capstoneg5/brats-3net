@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Vector database
+vector_db/
+
+# Embeddings
+data/embeddings/
+
+# Dataset
+data/brats/train/
+data/brats/val/
+test_data/
+*.tar
+*.tar.gz
+artifacts/
+artifacts/uploads/
+
+capstoneg5
+capstoneg5.pub
